@@ -176,7 +176,7 @@
     <!-- ======================= -->
     <!-- ABOUT SECTION           -->
     <!-- ======================= -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-white" class="fade-on-scroll">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About Me</h2>
@@ -239,7 +239,7 @@
     <!-- ======================= -->
     <!-- PROJECTS SECTION        -->
     <!-- ======================= -->
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="projects" class="py-20 bg-gray-50" class="fade-on-scroll">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -349,7 +349,7 @@
     <!-- ======================= -->
     <!-- CONTACT SECTION         -->
     <!-- ======================= -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-white" class="fade-on-scroll">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -573,5 +573,30 @@
       window.addEventListener("scroll", updateActiveLink);
       window.addEventListener("load", updateActiveLink);
     </script>
+
+    <style>
+  .fade-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s ease;
+  }
+  .fade-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<script>
+  const faders = document.querySelectorAll('.fade-on-scroll');
+  const appearOptions = { threshold: 0.2 };
+  const appearOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
   </body>
 </html>
