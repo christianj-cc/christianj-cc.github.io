@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -35,7 +35,7 @@
             --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
             --font: 'Inter', system-ui, -apple-system, sans-serif;
-            --font-title: 'Bricolage Grotesque', sans-serif;
+            --font-title: 'Inter', 'Bricolage Grotesque', sans-serif;
         }
 
         *,
@@ -147,7 +147,7 @@
         }
 
         /* ============================================================
-               NAV
+               NAV — no underline, white links, active red
             ============================================================ */
         nav {
             position: fixed;
@@ -175,7 +175,7 @@
 
         .nav-logo {
             font-family: var(--font-title);
-            font-weight: 800;
+            font-weight: 900;
             font-size: 1.2rem;
             letter-spacing: -0.5px;
             color: #fff;
@@ -205,9 +205,13 @@
         .nav-links a {
             color: #fff;
             transition: var(--transition);
-            position: relative;
             padding: 4px 0;
             opacity: 0.7;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            display: none;
         }
 
         .nav-links a:hover,
@@ -277,7 +281,7 @@
         }
 
         /* ============================================================
-               HERO — accent bg, grungy / artistic overlay
+               HERO — accent bg, filled text, grungy overlay
             ============================================================ */
         #hero {
             min-height: 100vh;
@@ -291,7 +295,6 @@
             overflow: hidden;
         }
 
-        /* Artistic / Grungy background layers */
         .hero-bg-layer {
             position: absolute;
             inset: 0;
@@ -378,27 +381,23 @@
         }
 
         .hero-content .name-wrap {
-            font-family: var(--font-title);
-            font-weight: 800;
+            font-family: 'Inter', 'Bricolage Grotesque', sans-serif;
+            font-weight: 900;
             font-size: clamp(3.5rem, 12vw, 8rem);
             text-transform: uppercase;
             letter-spacing: 0.04em;
             line-height: 1.02;
             margin-bottom: 8px;
-            color: transparent;
-            -webkit-text-stroke: 4px #fff;
-            text-stroke: 4px #fff;
+            color: #fff;
             text-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
             min-height: 1.2em;
         }
 
         .hero-content .name-wrap .scramble-text {
             display: inline-block;
-            color: transparent;
-            -webkit-text-stroke: 4px #fff;
-            text-stroke: 4px #fff;
-            font-family: var(--font-title);
-            font-weight: 800;
+            color: #fff;
+            font-family: 'Inter', 'Bricolage Grotesque', sans-serif;
+            font-weight: 900;
         }
 
         .hero-content .subtitle-wrap {
@@ -410,7 +409,7 @@
 
         .hero-content .subtitle-line {
             font-family: var(--font-title);
-            font-weight: 700;
+            font-weight: 800;
             font-size: clamp(1rem, 1.4vw, 1.3rem);
             color: rgba(255, 255, 255, 0.85);
             max-width: 600px;
@@ -473,8 +472,9 @@
             text-transform: uppercase;
             letter-spacing: 0.06em;
             border: none;
-            transition: var(--transition);
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, background 0.3s ease;
             font-family: var(--font-title);
+            transform: translateY(0);
         }
         .btn-primary {
             background: #fff;
@@ -482,8 +482,8 @@
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
         }
         .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
         }
         .btn-secondary {
             background: rgba(255, 255, 255, 0.08);
@@ -492,7 +492,7 @@
         }
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.18);
-            transform: translateY(-4px);
+            transform: translateY(-6px);
         }
 
         /* ============================================================
@@ -604,8 +604,9 @@
             justify-content: center;
             font-size: 1.2rem;
             color: var(--text-muted);
-            transition: var(--transition);
+            transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
             cursor: default;
+            transform: translateY(0);
         }
 
         .about-skills-inline .skill-icon:hover {
@@ -616,7 +617,7 @@
         }
 
         /* ============================================================
-               QUOTE SECTION — scroll-driven shape + text
+               QUOTE SECTION — scroll-driven shape + text (move upward)
             ============================================================ */
         #quote-scroll {
             height: 250vh;
@@ -637,18 +638,20 @@
 
         .quote-content {
             position: relative;
-            width: 80%;
-            max-width: 900px;
-            aspect-ratio: 4 / 3;
+            width: 70%;
+            max-width: 800px;
+            aspect-ratio: 5 / 4;
         }
 
         .quote-shape {
             position: absolute;
             inset: 0;
             background: var(--accent);
-            border-radius: 32px;
+            border-radius: 24px;
             transform-origin: center center;
             box-shadow: 0 30px 80px rgba(179, 26, 0, 0.25);
+            width: 100%;
+            height: 100%;
         }
 
         .quote-text {
@@ -656,18 +659,19 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-family: var(--font-title);
-            font-size: 6vw;
-            font-weight: 800;
+            font-family: 'Inter', 'Bricolage Grotesque', sans-serif;
+            font-weight: 900;
+            font-size: clamp(2.8rem, 9vw, 7rem);
             color: #fff;
             text-align: center;
             z-index: 10;
             text-transform: uppercase;
             line-height: 1.1;
-            letter-spacing: -0.02em;
+            letter-spacing: 0.02em;
             text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
+            width: 120%;
             padding: 20px;
+            white-space: nowrap;
         }
 
         /* ============================================================
@@ -694,7 +698,7 @@
         }
 
         .project-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-10px);
             border-color: var(--accent);
             box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5), 0 0 40px rgba(179, 26, 0, 0.06);
         }
@@ -1021,16 +1025,18 @@
             font-family: var(--font-title);
             text-transform: uppercase;
             letter-spacing: 0.06em;
+            transform: translateY(0);
         }
 
         .cert-card .credly-btn:hover {
             background: var(--accent);
             color: #fff;
             border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
         /* ============================================================
-               CONTACT
+               CONTACT — form aligned properly
             ============================================================ */
         #contact {
             background: var(--bg-primary);
@@ -1040,6 +1046,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
+            align-items: start;
         }
 
         .contact-info h3 {
@@ -1098,6 +1105,7 @@
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
             padding: 30px 32px;
+            width: 100%;
         }
 
         .contact-form .form-group {
@@ -1152,12 +1160,13 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            transition: var(--transition);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             font-family: var(--font-title);
+            transform: translateY(0);
         }
 
         .contact-form .btn-submit:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             box-shadow: 0 8px 32px rgba(179, 26, 0, 0.35);
         }
 
@@ -1264,6 +1273,7 @@
 
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1275,7 +1285,12 @@
                 grid-template-columns: 1fr;
             }
             .quote-text {
-                font-size: 8vw;
+                font-size: 8vw !important;
+                white-space: normal !important;
+                width: 100% !important;
+            }
+            .quote-content {
+                width: 80%;
             }
         }
 
@@ -1309,8 +1324,6 @@
 
             .hero-content .name-wrap {
                 font-size: clamp(2.8rem, 12vw, 4rem);
-                -webkit-text-stroke: 3px #fff;
-                text-stroke: 3px #fff;
             }
 
             .about-grid {
@@ -1370,10 +1383,16 @@
                 font-size: 0.8rem;
             }
             .quote-text {
-                font-size: 10vw;
+                font-size: 10vw !important;
+                white-space: normal !important;
+                width: 100% !important;
             }
             .quote-content {
                 width: 90%;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
         }
 
@@ -1383,8 +1402,7 @@
                 justify-content: center;
             }
             .hero-content .name-wrap {
-                -webkit-text-stroke: 2px #fff;
-                text-stroke: 2px #fff;
+                font-size: clamp(2.2rem, 10vw, 3rem);
             }
             .about-avatar {
                 width: 120px;
@@ -1403,7 +1421,13 @@
                 padding: 16px 18px 20px;
             }
             .quote-text {
-                font-size: 12vw;
+                font-size: 12vw !important;
+                white-space: normal !important;
+                width: 100% !important;
+            }
+            .quote-content {
+                width: 95%;
+                aspect-ratio: 4 / 3;
             }
         }
 
@@ -1512,7 +1536,7 @@
     </nav>
 
     <!-- ============================================================
-    HERO — grungy / artistic bg layers
+    HERO — filled text, grungy bg
     ============================================================ -->
     <section id="hero">
         <div class="hero-bg-layer">
@@ -1540,7 +1564,7 @@
     </section>
 
     <!-- ============================================================
-    ABOUT — with profile pic + skills inline
+    ABOUT
     ============================================================ -->
     <section id="about">
         <div class="container">
@@ -1550,7 +1574,6 @@
             </div>
             <div class="about-grid">
                 <div class="about-avatar reveal-scale">
-                    <!-- Replace src with your actual profile picture -->
                     <img src="https://ui-avatars.com/api/?name=Christian+Cahilig&background=b31a00&color=fff&size=200&bold=true" alt="Christian Cahilig" />
                 </div>
                 <div class="about-text reveal-right">
@@ -1567,7 +1590,6 @@
                         I'm constantly exploring new technologies to build software that is both functional and impactful.
                     </p>
 
-                    <!-- Skills inline (icons only) -->
                     <div class="about-skills-inline">
                         <span class="skill-icon" title="PHP"><i class="fab fa-php"></i></span>
                         <span class="skill-icon" title="Java"><i class="fab fa-java"></i></span>
@@ -1587,14 +1609,14 @@
     </section>
 
     <!-- ============================================================
-    QUOTE SECTION — scroll-driven shape + text
+    QUOTE SECTION — scroll-driven: shape + text move upward
     ============================================================ -->
     <section id="quote-scroll">
         <div class="quote-sticky">
             <div class="quote-content">
                 <div class="quote-shape scroll-shape"></div>
                 <div class="quote-text scroll-text">
-                    Build <br />with <br />purpose
+                    Building software with purpose.
                 </div>
             </div>
         </div>
@@ -1616,7 +1638,7 @@
     </section>
 
     <!-- ============================================================
-    EDUCATION — timeline + certifications
+    EDUCATION
     ============================================================ -->
     <section id="education">
         <div class="container">
@@ -1625,7 +1647,6 @@
                 <h2 class="section-title">Academic Journey</h2>
             </div>
 
-            <!-- Timeline -->
             <div class="edu-timeline">
                 <div class="edu-item reveal-left">
                     <div class="edu-marker"></div>
@@ -1664,12 +1685,10 @@
                 </div>
             </div>
 
-            <!-- Divider -->
             <div class="section-divider">
                 <span>Certifications &amp; Trainings</span>
             </div>
 
-            <!-- Certifications -->
             <div class="cert-grid">
                 <div class="cert-card reveal-scale">
                     <div class="icon-wrap"><i class="fas fa-shield-alt"></i></div>
@@ -1824,14 +1843,13 @@
     ============================================================ -->
     <script>
         // ============================================================
-        // SCRAMBLE EFFECT — longer duration (~6 seconds)
+        // SCRAMBLE EFFECT
         // ============================================================
         (function scrambleName() {
             const el = document.getElementById('scrambleName');
             const original = 'Christian Cahilig';
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=';
             let iteration = 0;
-            const maxIterations = 150;
             const speed = 40;
 
             function scramble() {
@@ -1852,12 +1870,11 @@
                     el.textContent = original;
                 }
             }
-
             setTimeout(scramble, 300);
         })();
 
         // ============================================================
-        // TYPING EFFECT — subtitle
+        // TYPING EFFECT
         // ============================================================
         (function typingEffect() {
             const subtitles = ['Software Developer', 'Computer Science Student'];
@@ -1888,7 +1905,7 @@
         })();
 
         // ============================================================
-        // QUOTE SCROLL — shape rises, text shrinks
+        // QUOTE SCROLL — shape and text move upward as scroll progresses
         // ============================================================
         (function quoteScroll() {
             const section = document.getElementById('quote-scroll');
@@ -1902,11 +1919,11 @@
                 const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / totalHeight));
 
                 if (progress > 0 && progress < 1) {
-                    const moveY = progress * 80;
-                    const scale = 1 - progress * 0.5;
+                    const moveY = progress * 120;
+                    const scale = 1 - progress * 0.6;
                     shape.style.transform = `translateY(${-moveY}px)`;
                     text.style.transform = `translate(-50%, -50%) translateY(${-moveY}px) scale(${scale})`;
-                    text.style.opacity = 1 - progress * 0.3;
+                    text.style.opacity = 1 - progress * 0.4;
                 }
             }
 
@@ -1916,7 +1933,7 @@
         })();
 
         // ============================================================
-        // PROJECT DATA (hardcoded)
+        // PROJECT DATA
         // ============================================================
         const projectsData = [{
             id: 'leorevita',
@@ -2036,7 +2053,7 @@
         renderProjects();
 
         // ============================================================
-        // CUSTOM CURSOR — arrow + ring (hand hidden globally)
+        // CUSTOM CURSOR
         // ============================================================
         (function initCursor() {
             const cursor = document.getElementById('custom-cursor');
@@ -2073,7 +2090,7 @@
         })();
 
         // ============================================================
-        // NAV: ACTIVE SECTION (red text, no underline) + PROGRESS BAR
+        // NAV: ACTIVE SECTION + PROGRESS BAR
         // ============================================================
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -2177,7 +2194,7 @@
         revealEls.forEach(el => observer.observe(el));
 
         console.log('🔥 Christian Cahilig · Portfolio');
-        console.log('🎨 Accent: #b31a00 · Custom cursor · Grungy hero');
+        console.log('🎨 Accent: #b31a00 · Custom cursor · No nav underlines');
     </script>
 
 </body>
