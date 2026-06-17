@@ -121,28 +121,23 @@ img {
   stroke-width: 3.5;
 }
 
-.cursor-glow{
-
+.cursor-trail{
     position:fixed;
 
-    width:400px;
-    height:400px;
+    width:14px;
+    height:14px;
 
     border-radius:50%;
 
+    background:var(--accent);
+
     pointer-events:none;
 
-    background:
-    radial-gradient(
-        circle,
-        rgba(179,26,0,.18),
-        transparent 70%
-    );
+    z-index:9999;
 
-    transform:
-        translate(-50%,-50%);
+    mix-blend-mode:screen;
 
-    z-index:0;
+    transform:translate(-50%,-50%);
 }
 
 /* ============================================================
@@ -310,6 +305,18 @@ nav.scrolled {
   padding: 100px 0 70px;
   position: relative;
   overflow: hidden;
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
 }
 
 .hero-bg-layer {
@@ -517,6 +524,95 @@ nav.scrolled {
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.18);
   transform: translateY(-6px);
+}
+
+
+/* BLOBS*/
+
+.blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.25;
+    background:var(--text-primary);
+}
+
+.blob-1{
+    width:500px;
+    height:500px;
+
+    top:-150px;
+    left:-100px;
+
+    animation:
+        blobFloat1 16s ease-in-out infinite;
+}
+
+.blob-2{
+    width:400px;
+    height:400px;
+
+    right:-100px;
+    top:20%;
+
+    animation:
+        blobFloat2 20s ease-in-out infinite;
+}
+
+.blob-3{
+    width:600px;
+    height:600px;
+
+    bottom:-250px;
+    left:40%;
+
+    animation:
+        blobFloat3 24s ease-in-out infinite;
+}
+
+@keyframes blobFloat1{
+
+    0%,100%{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translate(80px,50px)
+            scale(1.15);
+    }
+}
+
+@keyframes blobFloat2{
+
+    0%,100%{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translate(-100px,80px)
+            scale(.9);
+    }
+}
+
+@keyframes blobFloat3{
+
+    0%,100%{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translate(120px,-70px)
+            scale(1.2);
+    }
 }
 
 /* ============================================================

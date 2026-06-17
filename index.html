@@ -64,6 +64,13 @@
     HERO — filled text, grungy bg
     ============================================================ -->
     <section id="hero">
+
+      <div class="hero-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
       <div class="hero-bg-layer">
         <div class="stroke"></div>
         <div class="stroke"></div>
@@ -72,23 +79,31 @@
         <div class="stroke"></div>
         <div class="stroke"></div>
       </div>
+
       <div class="container hero-content">
         <div class="name-wrap">
-          <span class="scramble-text" id="scrambleName">Christian Cahilig</span>
+          <span class="scramble-text" id="scrambleName">
+            Christian Cahilig
+          </span>
         </div>
+
         <div class="subtitle-wrap">
           <p class="subtitle-line">
-            <span id="subtitle-typing"></span
-            ><span class="typing-cursor"></span>
+            <span id="subtitle-typing"></span>
+            <span class="typing-cursor"></span>
           </p>
         </div>
+
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary"
-            ><i class="fas fa-arrow-down"></i> View Projects</a
-          >
-          <a href="#contact" class="btn btn-secondary"
-            ><i class="fas fa-paper-plane"></i> Contact</a
-          >
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-arrow-down"></i>
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i>
+            Contact
+          </a>
         </div>
       </div>
     </section>
@@ -822,7 +837,14 @@
       </div>
     </footer>
 
-    <div class="cursor-glow"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
 
     <!-- ============================================================
     JAVASCRIPT
@@ -1107,24 +1129,81 @@
 
       });
 
-      const glow =
-        document.querySelector('.cursor-glow');
+      const trails = document.querySelectorAll('.cursor-trail');
 
-        window.addEventListener('mousemove',(e)=>{
+        let mouseX = 0;
+        let mouseY = 0;
 
-            glow.animate({
+        window.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
 
-                left:`${e.clientX}px`,
-                top:`${e.clientY}px`
+        const positions = [];
 
-            },{
+        for(let i=0;i<trails.length;i++){
+            positions.push({
+                x:mouseX,
+                y:mouseY
+            });
+        }
 
-                duration:400,
-                fill:'forwards'
+        function animateTrail(){
 
+            positions[0].x += (mouseX - positions[0].x) * .25;
+            positions[0].y += (mouseY - positions[0].y) * .25;
+
+            for(let i=1;i<positions.length;i++){
+
+                positions[i].x +=
+                    (positions[i-1].x - positions[i].x) * .25;
+
+                positions[i].y +=
+                    (positions[i-1].y - positions[i].y) * .25;
+            }
+
+            trails.forEach((trail,index)=>{
+
+                trail.style.left =
+                    positions[index].x + 'px';
+
+                trail.style.top =
+                    positions[index].y + 'px';
+
+                trail.style.scale =
+                    1 - (index * .08);
+
+                trail.style.opacity =
+                    1 - (index * .12);
             });
 
-        });
+            requestAnimationFrame(animateTrail);
+        }
+
+        animateTrail();
+      
+      const blobs =
+      document.querySelectorAll('.blob');
+
+      window.addEventListener('mousemove',e=>{
+
+          const x =
+              (e.clientX/window.innerWidth)-0.5;
+
+          const y =
+              (e.clientY/window.innerHeight)-0.5;
+
+          blobs.forEach((blob,index)=>{
+
+              const factor =
+                  (index+1)*20;
+
+              blob.style.transform =
+                  `translate(${x*factor}px,
+                            ${y*factor}px)`;
+          });
+
+      });
     </script>
   </body>
 </html>
