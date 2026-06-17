@@ -682,23 +682,16 @@ section {
 
 .project-card{
     position:relative;
-
     display:flex;
+    overflow: hidden;
     flex-direction:column;
-
     background:var(--card-bg);
-
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:24px;
-
-    overflow:hidden;
-
     transition:
         transform .35s cubic-bezier(.22,1,.36,1),
         box-shadow .35s ease,
         border-color .35s ease;
-
     isolation:isolate;
 }
 
@@ -708,23 +701,17 @@ section {
 
 .project-card::before{
     content:"";
-
     position:absolute;
     inset:0;
-
     background:
         radial-gradient(
             450px circle at var(--x) var(--y),
             rgba(255,255,255,.08),
             transparent 40%
         );
-
     opacity:0;
-
     transition:opacity .3s ease;
-
     pointer-events:none;
-
     z-index:1;
 }
 
@@ -738,10 +725,8 @@ section {
 
 .project-card:hover{
     transform:translateY(-8px);
-
     border-color:
         rgba(255,255,255,.16);
-
     box-shadow:
         0 20px 40px rgba(0,0,0,.25),
         0 0 20px rgba(179,26,0,.12);
@@ -753,20 +738,15 @@ section {
 
 .card-image{
     position:relative;
-
     overflow:hidden;
-
     aspect-ratio:16/9;
 }
 
 .card-image img{
     width:100%;
     height:100%;
-
     object-fit:cover;
-
     display:block;
-
     transition:
         transform .7s ease;
 }
@@ -778,7 +758,6 @@ section {
 .overlay{
     position:absolute;
     inset:0;
-
     background:
         linear-gradient(
             to top,
@@ -793,26 +772,18 @@ section {
 
 .card-body{
     position:relative;
-
     z-index:2;
-
     padding:1.5rem;
-
     display:flex;
     flex-direction:column;
-
     gap:.9rem;
 }
 
 .category{
     color:var(--accent);
-
     font-size:.8rem;
-
     font-weight:600;
-
     text-transform:uppercase;
-
     letter-spacing:.12em;
 }
 
@@ -823,7 +794,6 @@ section {
 
 .project-sub{
     color:var(--text-secondary);
-
     line-height:1.6;
 }
 
@@ -834,23 +804,17 @@ section {
 .tech-stack{
     display:flex;
     flex-wrap:wrap;
-
     gap:.6rem;
 }
 
 .tech{
     padding:.45rem .8rem;
-
     border-radius:999px;
-
     background:
         rgba(255,255,255,.04);
-
     border:
         1px solid rgba(255,255,255,.08);
-
     font-size:.8rem;
-
     transition:
         transform .25s ease,
         border-color .25s ease,
@@ -859,7 +823,6 @@ section {
 
 .project-card:hover .tech{
     transform:translateY(-2px);
-
     border-color:
         rgba(255,255,255,.15);
 }
@@ -870,17 +833,13 @@ section {
 
 .card-links{
     display:flex;
-
     gap:1rem;
-
     margin-top:.4rem;
 }
 
 .card-links a{
     color:var(--text);
-
     text-decoration:none;
-
     transition:
         color .25s ease,
         transform .25s ease;
@@ -888,7 +847,6 @@ section {
 
 .card-links a:hover{
     color:var(--accent);
-
     transform:translateX(3px);
 }
 
@@ -898,18 +856,13 @@ section {
 
 .glow-line{
     position:absolute;
-
     bottom:0;
     left:0;
-
     width:0;
     height:3px;
-
     background:var(--accent);
-
     transition:
         width .35s ease;
-
     z-index:3;
 }
 
