@@ -1035,14 +1035,28 @@ section {
   height: 2px;
 }
 
-/* ============================================================
-         CERTIFICATIONS
-      ============================================================ */
+/* ==========================================================
+   CERTIFICATIONS
+========================================================== */
+
+.cert-carousel{
+    overflow:hidden;
+    margin-top:3rem;
+    mask-image:linear-gradient(
+        to right,
+        transparent,
+        white 10%,
+        white 90%,
+        transparent
+    );
+}
+
 .cert-track{
     display:flex;
     gap:2rem;
     width:max-content;
-    animation:scrollCerts 25s linear infinite;
+
+    animation:scrollCerts 28s linear infinite;
 }
 
 .cert-track:hover{
@@ -1058,12 +1072,112 @@ section {
     }
 }
 
+/* ==========================================================
+   CARD
+========================================================== */
+
 .cert-card{
-    min-width:300px;
+    width:560px;
     background:var(--card-bg);
+    border:1px solid rgba(255,255,255,.08);
     border-radius:24px;
     overflow:hidden;
-    border:1px solid rgba(255,255,255,.08);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.cert-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,255,255,.16);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.cert-image{
+    aspect-ratio:16/9;
+    overflow:hidden;
+}
+
+.cert-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:transform .6s ease;
+}
+
+.cert-card:hover img{
+    transform:scale(1.05);
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.cert-content{
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+}
+
+.cert-provider{
+    width:fit-content;
+    padding:.35rem .75rem;
+    border-radius:999px;
+    background:
+        rgba(179,26,0,.12);
+    border:
+        1px solid rgba(179,26,0,.25);
+    color:var(--accent);
+    font-size:.8rem;
+    font-weight:600;
+}
+
+.cert-content h3{
+    font-size:1.25rem;
+    line-height:1.3;
+}
+
+.cert-date{
+    color:var(--accent);
+    font-size:.9rem;
+    font-weight:500;
+}
+
+.cert-description{
+    color:var(--text-secondary);
+    line-height:1.6;
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.cert-btn{
+    margin-top:auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:.85rem 1rem;
+    border-radius:12px;
+    text-decoration:none;
+    background:var(--accent);
+    color:white;
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+.cert-btn:hover{
+    transform:translateY(-2px);
+    opacity:.9;
 }
 
 /* ============================================================
