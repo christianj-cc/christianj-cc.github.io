@@ -6,12 +6,9 @@
     <title>Christian Cahilig · Portfolio</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome 6 -->
     <link
@@ -173,12 +170,19 @@
     ============================================================ -->
     <section id="quote-scroll">
       <div class="quote-sticky">
-        <div class="quote-content">
-          <div class="quote-shape scroll-shape"></div>
-          <div class="quote-text scroll-text">
-            Building software with purpose.
-          </div>
-        </div>
+
+        <div class="quote-square"></div>
+
+        <h2 class="quote-text">
+            BUILDING 
+            <br>
+            PRACTICAL
+            <br>
+            SOLUTIONS
+            <br>
+            THROUGH CODE
+        </h2>
+
       </div>
     </section>
 
@@ -841,32 +845,37 @@
       // QUOTE SCROLL — shape and text move upward as scroll progresses
       // ============================================================
       (function quoteScroll() {
+
         const section = document.getElementById("quote-scroll");
-        const shape = section.querySelector(".scroll-shape");
-        const text = section.querySelector(".scroll-text");
+        const square = document.querySelector(".quote-square");
+        const text = document.querySelector(".quote-text");
 
         function update() {
+
           const rect = section.getBoundingClientRect();
-          const totalHeight = section.offsetHeight;
-          const windowHeight = window.innerHeight;
+
           const progress = Math.max(
             0,
-            Math.min(1, (windowHeight - rect.top) / totalHeight),
+            Math.min(
+              1,
+              (window.innerHeight - rect.top) /
+              section.offsetHeight
+            )
           );
 
-          if (progress > 0 && progress < 1) {
-            const moveY = progress * 120;
-            const scale = 1 - progress * 0.6;
-            shape.style.transform = `translateY(${-moveY}px)`;
-            text.style.transform = `translate(-50%, -50%) translateY(${-moveY}px) scale(${scale})`;
-            text.style.opacity = 1 - progress * 0.4;
-          }
+          const scale = 1.4 - (progress * .5);
+
+          text.style.transform =
+            `scale(${scale})`;
         }
+
+        update();
 
         window.addEventListener("scroll", update);
         window.addEventListener("resize", update);
-        update();
+
       })();
+      
 
       // ============================================================
       // CUSTOM CURSOR
@@ -1024,6 +1033,29 @@
 
       console.log("🔥 Christian Cahilig · Portfolio");
       console.log("🎨 Accent: #b31a00 · Custom cursor · No nav underlines");
+
+      document
+      .querySelectorAll('.project-card')
+      .forEach(card => {
+
+        card.addEventListener('mousemove', e => {
+
+          const rect =
+            card.getBoundingClientRect();
+
+          card.style.setProperty(
+            '--x',
+            `${e.clientX - rect.left}px`
+          );
+
+          card.style.setProperty(
+            '--y',
+            `${e.clientY - rect.top}px`
+          );
+
+        });
+
+      });
     </script>
   </body>
 </html>
