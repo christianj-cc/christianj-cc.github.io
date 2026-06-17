@@ -847,7 +847,7 @@ section {
 .card-image {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/8;
 }
 
 .card-image img {
@@ -872,13 +872,16 @@ section {
    BODY
 ========================================================== */
 
-.card-body {
-  position: relative;
-  z-index: 2;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
+.card-body{
+  position:relative;
+  z-index:2;
+  margin-top:-24px;
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:.7rem;
+  background:var(--bg-card);
+  border-radius:24px 24px 0 0;
 }
 
 .category {
@@ -938,7 +941,8 @@ section {
 .project-links {
   display: flex;
   gap: 0.75rem;
-  margin-top: auto;
+  margin-top: 0.5rem;
+  justify-content: right;
 }
 
 .project-links a {
@@ -1127,6 +1131,14 @@ section {
 
 .certifications-bg .blob {
   background:var(--text-primary);
+}
+
+#certifications .section-header span, h2{
+  color: var(--text-primary);
+}
+
+#certifications .section-header span{
+  border-color: var(--text-primary);
 }
 
 .cert-carousel {
