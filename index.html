@@ -587,6 +587,7 @@
                 development, and software fundamentals.
               </p>
             </div>
+            <div class="cert-glow-line"></div>
           </article>
 
           <!-- Database -->
@@ -606,6 +607,7 @@
                 relational database management.
               </p>
             </div>
+            <div class="cert-glow-line"></div>
           </article>
 
           <!-- Network Security -->
@@ -625,6 +627,7 @@
                 mitigation, security controls, and cybersecurity principles.
               </p>
             </div>
+            <div class="cert-glow-line"></div>
           </article>
 
           <!-- Java -->
@@ -644,6 +647,7 @@
                 development, and software fundamentals.
               </p>
             </div>
+            <div class="cert-glow-line"></div>
           </article>
 
           <!-- Database -->
@@ -663,6 +667,7 @@
                 relational database management.
               </p>
             </div>
+            <div class="cert-glow-line"></div>
           </article>
 
           <!-- Network Security -->
@@ -682,6 +687,7 @@
                 mitigation, security controls, and cybersecurity principles.
               </p>
             </div>
+            <div class="cert-glow-line"></div>
           </article>
         </div>
       </div>
@@ -1111,7 +1117,11 @@
       console.log("🔥 Christian Cahilig · Portfolio");
       console.log("🎨 Accent: #b31a00 · Custom cursor · No nav underlines");
 
-      document.querySelectorAll(".project-card").forEach((card) => {
+      // ============================================================
+      // CURSOR GLOW IN CARDS
+      // ============================================================
+
+      document.querySelectorAll(".project-card, .cert-card").forEach((card) => {
         card.addEventListener("mousemove", (e) => {
           const rect = card.getBoundingClientRect();
 
