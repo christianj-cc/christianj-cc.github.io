@@ -376,7 +376,7 @@
           <div class="project-card reveal">
             <div class="card-image">
               <img
-                src="assets/projects/Iris HR/landing.png"
+                src="assets/projects/Iris HR/login.png"
                 alt="IrisHR"
                 loading="lazy"
               />
@@ -835,10 +835,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span
-            >&copy; 2026 Christian Cahilig.
-            <i class="fas fa-heart" style="color: var(--accent)"></i
-          ></span>
+          <span>&copy; 2026 Christian Cahilig.</span>
           <div class="footer-socials">
             <a
               href="https://github.com/christianj-cc"
@@ -857,6 +854,7 @@
       </div>
     </footer>
 
+    <div class="cursor-trail"></div>
     <div class="cursor-trail"></div>
     <div class="cursor-trail"></div>
     <div class="cursor-trail"></div>
@@ -946,10 +944,15 @@
 
           const progress = Math.max(
             0,
-            Math.min(1, (window.innerHeight - rect.top) / section.offsetHeight),
+            Math.min(
+              1,
+              (window.innerHeight - rect.top) / (section.offsetHeight * 2),
+            ),
           );
 
-          const scale = 1.4 - progress * 0.7;
+          const eased = 1 - Math.pow(1 - progress, 3);
+
+          const scale = 1.4 - eased * 0.6;
 
           text.style.transform = `scale(${scale})`;
         }
@@ -961,21 +964,25 @@
       })();
 
       // ============================================================
-      // CUSTOM CURSOR
+      // CUSTOM CURSOR + TRAILS
       // ============================================================
-      (function initCursor() {
-        const cursor = document.getElementById("custom-cursor");
-        if (!cursor) return;
+
+      const cursor = document.getElementById("custom-cursor");
+      const trails = document.querySelectorAll(".cursor-trail");
+
+      if (cursor && trails.length) {
         let mouseX = 0,
           mouseY = 0;
         let cursorX = 0,
           cursorY = 0;
 
+        // Track mouse position
         document.addEventListener("mousemove", (e) => {
           mouseX = e.clientX;
           mouseY = e.clientY;
         });
 
+        // Animate main cursor
         function animateCursor() {
           cursorX += (mouseX - cursorX) * 0.15;
           cursorY += (mouseY - cursorY) * 0.15;
@@ -985,22 +992,54 @@
         }
         animateCursor();
 
+        // Animate trails with lag
+        const positions = [];
+        for (let i = 0; i < trails.length; i++) {
+          positions.push({ x: mouseX, y: mouseY });
+        }
+
+        function animateTrail() {
+          positions[0].x += (mouseX - positions[0].x) * 0.25;
+          positions[0].y += (mouseY - positions[0].y) * 0.25;
+
+          for (let i = 1; i < positions.length; i++) {
+            positions[i].x += (positions[i - 1].x - positions[i].x) * 0.25;
+            positions[i].y += (positions[i - 1].y - positions[i].y) * 0.25;
+          }
+
+          trails.forEach((trail, index) => {
+            trail.style.left = positions[index].x + "px";
+            trail.style.top = positions[index].y + "px";
+            trail.style.scale = 1 - index * 0.08;
+            trail.style.opacity = 1 - index * 0.12;
+          });
+
+          requestAnimationFrame(animateTrail);
+        }
+        animateTrail();
+
+        // === HOVER EFFECT — applies to BOTH cursor AND trails ===
         const interactive = document.querySelectorAll(
-          "a, button, .btn, .project-card, .skill-icon, .edu-item, .cert-card, .nav-resume-btn, .credly-btn",
+          "a, button, .btn, .project-card, .skill-icon, .cert-card, .nav-resume-btn, .credly-btn",
         );
+
         interactive.forEach((el) => {
-          el.addEventListener("mouseenter", () =>
-            cursor.classList.add("hover"),
-          );
-          el.addEventListener("mouseleave", () =>
-            cursor.classList.remove("hover"),
-          );
+          el.addEventListener("mouseenter", () => {
+            cursor.classList.add("hover");
+            trails.forEach((t) => t.classList.add("hover"));
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hover");
+            trails.forEach((t) => t.classList.remove("hover"));
+          });
         });
 
+        // Hide on touch devices
         if ("ontouchstart" in window) {
           cursor.style.display = "none";
+          trails.forEach((t) => (t.style.display = "none"));
         }
-      })();
+      }
 
       // ============================================================
       // NAV: ACTIVE SECTION + PROGRESS BAR
@@ -1130,54 +1169,6 @@
           card.style.setProperty("--y", `${e.clientY - rect.top}px`);
         });
       });
-
-      // ============================================================
-      // CURSOR TRAILS
-      // ============================================================
-
-      const trails = document.querySelectorAll(".cursor-trail");
-
-      let mouseX = 0;
-      let mouseY = 0;
-
-      window.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      const positions = [];
-
-      for (let i = 0; i < trails.length; i++) {
-        positions.push({
-          x: mouseX,
-          y: mouseY,
-        });
-      }
-
-      function animateTrail() {
-        positions[0].x += (mouseX - positions[0].x) * 0.25;
-        positions[0].y += (mouseY - positions[0].y) * 0.25;
-
-        for (let i = 1; i < positions.length; i++) {
-          positions[i].x += (positions[i - 1].x - positions[i].x) * 0.25;
-
-          positions[i].y += (positions[i - 1].y - positions[i].y) * 0.25;
-        }
-
-        trails.forEach((trail, index) => {
-          trail.style.left = positions[index].x + "px";
-
-          trail.style.top = positions[index].y + "px";
-
-          trail.style.scale = 1 - index * 0.08;
-
-          trail.style.opacity = 1 - index * 0.12;
-        });
-
-        requestAnimationFrame(animateTrail);
-      }
-
-      animateTrail();
 
       // ============================================================
       // BACKGROUND BLOBS
