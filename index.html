@@ -275,7 +275,14 @@
         </div>
         <div class="projects-grid">
           <!-- Project 1: Leo Revita MS -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Leo Revita MS is a full-featured salon management platform
+  developed to streamline appointments, customer records,
+  inventory management, employee administration, and sales
+  monitoring through a centralized dashboard.
+">
             <div
               class="card-image"
               data-images='[
@@ -345,7 +352,11 @@
           </div>
 
           <!-- Project 2: Email & SMS Phishing Detection -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Email & SMS Phishing Detection is a...
+">
             <div
               class="card-image"
               data-images='[
@@ -412,7 +423,11 @@
           </div>
 
           <!-- Project 3: Brewed & Blended -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Brewed & Blended is a...
+">
             <div
               class="card-image"
               data-images='[
@@ -480,7 +495,11 @@
           </div>
 
           <!-- Project 4: Tumba Lata -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Tumba Lata is a...
+">
             <div
               class="card-image"
               data-images='[
@@ -547,7 +566,11 @@
           </div>
 
           <!-- Project 5: IrisHR -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Iris HR is a...
+">
             <div
               class="card-image"
               data-images='[
@@ -616,7 +639,11 @@
           </div>
 
           <!-- Project 6: Hazey's Crochet -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Hazey's Crochet is a...
+">
             <div
               class="card-image"
               data-images='[
@@ -685,7 +712,11 @@
           </div>
 
           <!-- Project 7: Tic-Tac-Toe -->
-          <div class="project-card reveal">
+          <div
+  class="project-card reveal"
+  data-long-description="
+  Tic-Tac-Toe is a...
+">
             <div
               class="card-image"
               data-images='[
@@ -1064,24 +1095,39 @@
     <div class="cursor-trail"></div>
     <div class="cursor-trail"></div>
 
-    <div id="project-modal" class="project-modal">
-      <div class="modal-content">
-        <button class="modal-close">
+    <!-- PROJECT MODAL -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-container">
+        <button class="modal-close" id="modalClose">
           <i class="fas fa-times"></i>
         </button>
 
-        <div class="modal-grid">
-          <div class="modal-gallery">
-            <img id="modal-image" src="" alt="" />
+        <div class="modal-left">
+          <img id="modalImage" class="modal-image" src="" alt="">
+          <button class="modal-nav modal-prev" id="modalPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="modal-nav modal-next" id="modalNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="modal-counter">
+            <span id="modalCurrent">1</span> /
+            <span id="modalTotal">1</span>
           </div>
+        </div>
 
-          <div class="modal-details">
-            <span id="modal-category" class="category"></span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-            <p id="modal-long-description">
-              Add longer project description here.
-            </p>
+        <div class="modal-right">
+          <span id="modalCategory" class="category"></span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalDescription"></p>
+          <p id="modalLongDescription"></p>
+          <div
+            class="modal-tech-stack"
+            id="modalTechStack">
+          </div>
+          <div
+            class="modal-links"
+            id="modalLinks">
           </div>
         </div>
       </div>
@@ -1406,43 +1452,156 @@
       // ============================================================
       // MODALS - OPEN & CLOSE
       // ============================================================
+      const modal = document.getElementById("projectModal");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalCategory = document.getElementById("modalCategory");
+      const modalDescription = document.getElementById("modalDescription");
+      const modalLongDescription = document.getElementById("modalLongDescription");
+      const modalTechStack = document.getElementById("modalTechStack");
+      const modalLinks = document.getElementById("modalLinks");
+      const modalCurrent = document.getElementById("modalCurrent");
+      const modalTotal = document.getElementById("modalTotal");
+      const modalPrev = document.getElementById("modalPrev");
+      const modalNext = document.getElementById("modalNext");
+      const modalClose = document.getElementById("modalClose");
 
-      const modal = document.getElementById("project-modal");
-      const modalImage = document.getElementById("modal-image");
+      let modalImages = [];
+      let modalIndex = 0;
 
-      document.querySelectorAll(".img-expand").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
+      function updateModalImage(){
+
+        modalImage.style.opacity = 0;
+
+        setTimeout(() => {
+
+          modalImage.src =
+            modalImages[modalIndex];
+
+          modalCurrent.textContent =
+            modalIndex + 1;
+
+          modalImage.style.opacity = 1;
+
+        },150);
+      }
+
+
+      document
+      .querySelectorAll(".img-expand")
+      .forEach(btn=>{
+
+        btn.addEventListener("click",(e)=>{
+
           e.stopPropagation();
 
-          console.log("expand clicked");
+          const card =
+            btn.closest(".project-card");
 
-          const card = btn.closest(".project-card");
-          const image = card.querySelector("img");
+          const imageWrap =
+            card.querySelector(".card-image");
 
-          modalImage.src = image.src;
+          modalImages =
+            JSON.parse(
+              imageWrap.dataset.images
+            );
 
-          document.getElementById("modal-title").textContent =
-            card.querySelector(".project-title").textContent;
+          modalIndex = 0;
 
-          document.getElementById("modal-category").textContent =
-            card.querySelector(".category").textContent;
+          modalTitle.textContent =
+            card.querySelector(
+              ".project-title"
+            ).textContent;
 
-          document.getElementById("modal-description").textContent =
-            card.querySelector(".project-sub").textContent;
+          modalCategory.textContent =
+            card.querySelector(
+              ".category"
+            ).textContent;
+
+          modalDescription.textContent =
+            card.querySelector(
+              ".project-sub"
+            ).textContent;
+
+          modalLongDescription.textContent =
+            card.dataset.longDescription ||
+            "";
+
+          modalTechStack.innerHTML =
+            card.querySelector(
+              ".tech-stack"
+            ).innerHTML;
+
+          modalLinks.innerHTML =
+            card.querySelector(
+              ".project-links"
+            ).innerHTML;
+
+          modalTotal.textContent =
+            modalImages.length;
+
+          updateModalImage();
 
           modal.classList.add("active");
+
         });
+
       });
 
-      document.querySelector(".modal-close").addEventListener("click", () => {
-        modal.classList.remove("active");
-      });
 
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.classList.remove("active");
+      modalPrev.addEventListener(
+        "click",
+        ()=>{
+
+          modalIndex--;
+
+          if(modalIndex < 0){
+            modalIndex =
+            modalImages.length - 1;
+          }
+
+          updateModalImage();
+
         }
-      });
+      );
+
+      modalNext.addEventListener(
+        "click",
+        ()=>{
+
+          modalIndex++;
+
+          if(
+            modalIndex >=
+            modalImages.length
+          ){
+            modalIndex = 0;
+          }
+
+          updateModalImage();
+
+        }
+      );
+
+      modalClose.addEventListener(
+        "click",
+        ()=>{
+          modal.classList.remove(
+            "active"
+          );
+        }
+      );
+
+      modal.addEventListener(
+        "click",
+        (e)=>{
+          if(e.target === modal){
+            modal.classList.remove(
+              "active"
+            );
+          }
+        }
+      );
     </script>
   </body>
 </html>
