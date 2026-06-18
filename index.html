@@ -50,7 +50,6 @@
           <ul class="nav-links" id="navLinks">
             <li><a href="#about" data-section="about">About</a></li>
             <li><a href="#projects" data-section="projects">Projects</a></li>
-            <li><a href="#education" data-section="education">Education</a></li>
             <li>
               <a href="#certifications" data-section="certifications"
                 >Certifications</a
@@ -59,7 +58,13 @@
             <li><a href="#contact" data-section="contact">Contact</a></li>
           </ul>
         </div>
-        <button class="nav-resume-btn" id="downloadResume">Resume</button>
+        <a
+          href="https://drive.google.com/file/d/1h-YC76itiYwDYIXcGIdnMWWxKM1mbQTJ/view?usp=drive_link"
+          target="_blank"
+          class="nav-resume-btn"
+          id="downloadResume"
+          >Resume</a
+        >
         <button class="nav-hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -145,6 +150,12 @@
             </p>
 
             <div class="about-skills-inline">
+              <span class="skill-icon" title="HTML5"
+                ><i class="fab fa-html5"></i
+              ></span>
+              <span class="skill-icon" title="CSS3"
+                ><i class="fab fa-css3"></i
+              ></span>
               <span class="skill-icon" title="PHP"
                 ><i class="fab fa-php"></i
               ></span>
@@ -185,26 +196,68 @@
     </section>
 
     <!-- ============================================================
-    QUOTE SECTION — scroll-driven: shape + text move upward
+    EDUCATION
     ============================================================ -->
-    <section id="quote-scroll">
-      <div class="quote-sticky">
-        <div class="quote-square"></div>
+    <section id="about" class="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label"
+            ><i class="fas fa-graduation-cap"></i> Education</span
+          >
+          <h2 class="section-title">Academic Journey</h2>
+        </div>
 
-        <h2 class="quote-text">
-          BUILDING
-          <br />
-          PRACTICAL
-          <br />
-          SOLUTIONS
-          <br />
-          THROUGH CODE
-        </h2>
+        <div class="edu-timeline">
+          <div class="edu-item reveal-left">
+            <div class="edu-marker"></div>
+            <div class="edu-content">
+              <div class="title">Bachelor of Science in Computer Science</div>
+              <div class="school">University of Mindanao</div>
+              <div class="meta">
+                <span><i class="fas fa-calendar-alt"></i> Expected 2027</span>
+                <span><i class="fas fa-user-graduate"></i> Undergraduate</span>
+                <span class="honor"
+                  ><i class="fas fa-star"></i> With Honors</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="edu-item reveal-left" style="transition-delay: 0.08s">
+            <div class="edu-marker"></div>
+            <div class="edu-content">
+              <div class="title">Humanities and Social Sciences</div>
+              <div class="school">San Pedro College</div>
+              <div class="meta">
+                <span><i class="fas fa-calendar-alt"></i> 2018 – 2020</span>
+                <span
+                  ><i class="fas fa-user-graduate"></i> Senior High School</span
+                >
+                <span class="honor"
+                  ><i class="fas fa-star"></i> With Honors</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="edu-item reveal-left" style="transition-delay: 0.16s">
+            <div class="edu-marker"></div>
+            <div class="edu-content">
+              <div class="title">Dean's Lister – First Honor</div>
+              <div class="school">University of Mindanao (Main Campus)</div>
+              <div class="meta">
+                <span><i class="fas fa-calendar-alt"></i> 2023 – Present</span>
+                <span
+                  ><i class="fas fa-trophy"></i> Consistent academic
+                  excellence</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ============================================================
-    PROJECTS — Hardcoded HTML
+    PROJECTS 
     ============================================================ -->
     <section id="projects">
       <div class="projects-bg">
@@ -484,67 +537,6 @@
               </div>
             </div>
             <div class="glow-line"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-    EDUCATION
-    ============================================================ -->
-    <section id="education">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label"
-            ><i class="fas fa-graduation-cap"></i> Education</span
-          >
-          <h2 class="section-title">Academic Journey</h2>
-        </div>
-
-        <div class="edu-timeline">
-          <div class="edu-item reveal-left">
-            <div class="edu-marker"></div>
-            <div class="edu-content">
-              <div class="title">Bachelor of Science in Computer Science</div>
-              <div class="school">University of Mindanao</div>
-              <div class="meta">
-                <span><i class="fas fa-calendar-alt"></i> Expected 2027</span>
-                <span><i class="fas fa-user-graduate"></i> Undergraduate</span>
-                <span class="honor"
-                  ><i class="fas fa-star"></i> With Honors</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="edu-item reveal-left" style="transition-delay: 0.08s">
-            <div class="edu-marker"></div>
-            <div class="edu-content">
-              <div class="title">Humanities and Social Sciences</div>
-              <div class="school">San Pedro College</div>
-              <div class="meta">
-                <span><i class="fas fa-calendar-alt"></i> 2018 – 2020</span>
-                <span
-                  ><i class="fas fa-user-graduate"></i> Senior High School</span
-                >
-                <span class="honor"
-                  ><i class="fas fa-star"></i> With Honors</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="edu-item reveal-left" style="transition-delay: 0.16s">
-            <div class="edu-marker"></div>
-            <div class="edu-content">
-              <div class="title">Dean's Lister – First Honor</div>
-              <div class="school">University of Mindanao (Main Campus)</div>
-              <div class="meta">
-                <span><i class="fas fa-calendar-alt"></i> 2023 – Present</span>
-                <span
-                  ><i class="fas fa-trophy"></i> Consistent academic
-                  excellence</span
-                >
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -904,7 +896,11 @@
       // TYPING EFFECT
       // ============================================================
       (function typingEffect() {
-        const subtitles = ["Software Developer", "Computer Science Student"];
+        const subtitles = [
+          "Software Developer",
+          "Computer Science Student",
+          "Graphic Designer",
+        ];
         let subIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -929,38 +925,6 @@
           setTimeout(type, isDeleting ? 40 : 100);
         }
         type();
-      })();
-
-      // ============================================================
-      // QUOTE SCROLL — shape and text move upward as scroll progresses
-      // ============================================================
-      (function quoteScroll() {
-        const section = document.getElementById("quote-scroll");
-        const square = document.querySelector(".quote-square");
-        const text = document.querySelector(".quote-text");
-
-        function update() {
-          const rect = section.getBoundingClientRect();
-
-          const progress = Math.max(
-            0,
-            Math.min(
-              1,
-              (window.innerHeight - rect.top) / (section.offsetHeight * 2),
-            ),
-          );
-
-          const eased = 1 - Math.pow(1 - progress, 3);
-
-          const scale = 1.4 - eased * 0.6;
-
-          text.style.transform = `scale(${scale})`;
-        }
-
-        update();
-
-        window.addEventListener("scroll", update);
-        window.addEventListener("resize", update);
       })();
 
       // ============================================================
@@ -1020,7 +984,7 @@
 
         // === HOVER EFFECT — applies to BOTH cursor AND trails ===
         const interactive = document.querySelectorAll(
-          "a, button, .btn, .project-card, .skill-icon, .cert-card, .nav-resume-btn, .credly-btn",
+          "a, button, .btn, .project-card, .cert-card, .nav-resume-btn, .credly-btn",
         );
 
         interactive.forEach((el) => {
@@ -1065,9 +1029,11 @@
 
         let currentSection = "";
         sections.forEach((sec) => {
-          const top = sec.offsetTop - 80;
+          const top = sec.offsetTop;
           const height = sec.offsetHeight;
-          if (scrollY >= top && scrollY < top + height) {
+          const triggerPoint = scrollY + window.innerHeight * 0.3;
+
+          if (triggerPoint >= top && triggerPoint < top + height) {
             currentSection = sec.id;
           }
         });
@@ -1096,16 +1062,6 @@
           navLinksContainer.classList.remove("open");
         });
       });
-
-      // ============================================================
-      // RESUME DOWNLOAD
-      // ============================================================
-      document
-        .getElementById("downloadResume")
-        .addEventListener("click", (e) => {
-          e.preventDefault();
-          showToast("📄 Resume download started!");
-        });
 
       // ============================================================
       // CONTACT FORM
