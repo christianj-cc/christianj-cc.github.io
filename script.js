@@ -228,24 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  // 6. CONTACT FORM
-  // ============================================================
-  document.getElementById("contactForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("formName").value.trim();
-    const email = document.getElementById("formEmail").value.trim();
-    const msg = document.getElementById("formMessage").value.trim();
-
-    if (!name || !email || !msg) {
-      showToast("Please fill out all fields.");
-      return;
-    }
-    showToast(`Thanks ${name}! Your message was sent.`);
-    e.target.reset();
-  });
-
-  // ============================================================
-  // 7. TOAST NOTIFICATION
+  // 6. TOAST NOTIFICATION
   // ============================================================
   function showToast(msg) {
     const toast = document.getElementById("toast");
@@ -257,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ============================================================
-  // 8. SCROLL REVEAL (Intersection Observer)
+  // 7. SCROLL REVEAL (Intersection Observer)
   // ============================================================
   const revealEls = document.querySelectorAll(
     ".reveal, .reveal-left, .reveal-right, .reveal-scale",
@@ -275,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
   revealEls.forEach((el) => observer.observe(el));
 
   // ============================================================
-  // 9. CURSOR GLOW INSIDE CARDS (CSS custom properties)
+  // 8. CURSOR GLOW INSIDE CARDS (CSS custom properties)
   // ============================================================
   document.querySelectorAll(".project-card, .cert-card").forEach((card) => {
     card.addEventListener("mousemove", (e) => {
@@ -286,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  // 10. BACKGROUND BLOBS (Parallax following mouse)
+  // 9. BACKGROUND BLOBS (Parallax following mouse)
   // ============================================================
   const blobs = document.querySelectorAll(".blob");
 
@@ -301,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  // 11. PROJECT CARD IMAGE GALLERY (Previous / Next buttons)
+  // 10. PROJECT CARD IMAGE GALLERY (Previous / Next buttons)
   // ============================================================
   document.querySelectorAll(".card-image").forEach((gallery) => {
     const images = JSON.parse(gallery.dataset.images);
@@ -325,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  // 12. PROJECT MODAL (Expand view)
+  // 11. PROJECT MODAL (Expand view)
   // ============================================================
   const modal = document.getElementById("projectModal");
   const modalImage = document.getElementById("modalImage");
@@ -403,7 +386,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  // 13. CERTIFICATE LINK BUTTON (optional console log)
+  // 12. CERTIFICATE LINK BUTTON (optional console log)
   // ============================================================
   document.querySelectorAll(".cert-link-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
