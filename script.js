@@ -322,6 +322,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalPrev = document.getElementById("modalPrev");
   const modalNext = document.getElementById("modalNext");
   const modalClose = document.getElementById("modalClose");
+  
+  const modalDate = document.getElementById("modal-date");
+
 
   let modalImages = [];
   let modalIndex = 0;
@@ -348,6 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       modalTitle.textContent = card.querySelector(".project-title").textContent;
       modalCategory.textContent = card.querySelector(".category").textContent;
+      modalDate.innerHTML = card.querySelector(".project-date").innerHTML;
       modalLongDescription.innerHTML = card.dataset.longDescription;
 
       const techs = [...card.querySelectorAll(".tech")]
