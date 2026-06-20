@@ -1060,7 +1060,7 @@ section {
 }
 
 /* ==========================================================
-   BOTTOM ACCENT LINE
+   PROJECT GLOW LINE
 ========================================================== */
 
 .glow-line {
@@ -1244,7 +1244,7 @@ h2 {
 }
 
 /* ==========================================================
-  GLOW LINE
+  CERT GLOW LINE
 ========================================================== */
 
 .cert-glow-line {
@@ -1443,55 +1443,76 @@ h2 {
 }
 
 .contact-links {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
   margin-top: 3rem;
 }
 
 .contact-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    var(--bg-primary) 25%,
+    transparent 90%
+  );
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    width 0.25s ease,
+    height 0.25s ease;
+  height: 180px;
   gap: 14px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border-color);
+  padding: 30px 20px;
   color: var(--text-secondary);
-  transition: var(--transition);
   font-size: 0.9rem;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-item:hover {
   color: var(--text-primary);
+  background: var(--bg-primary);
 }
 
 .contact-item i {
   width: 50px;
   text-align: center;
   color: var(--accent);
-  font-size: 3rem;
+  font-size: 2.5rem;
   transition: var(--transition);
+  margin-top: 10px;
 }
 
-.contact-item i:hover {
+.contact-item:hover i {
   width: 50px;
   text-align: center;
   color: var(--accent-opp);
   font-size: 3rem;
 }
 
-.contact-item .social-group {
-  display: flex;
-  gap: 20px;
+/* ==========================================================
+  CONTACT GLOW LINE
+========================================================== */
+
+.cont-glow-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent-opp);
+  transition: width 0.35s ease;
+  z-index: 3;
 }
 
-.contact-item .social-group a {
-  color: var(--text-muted);
-  transition: var(--transition);
-  font-size: 1.1rem;
-}
-
-.contact-item .social-group a:hover {
-  color: var(--accent);
+.contact-item:hover .cont-glow-line {
+  width: 100%;
+  visibility: visible;
 }
 
 /* ============================================================
