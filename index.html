@@ -214,422 +214,579 @@
 
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label"><i class="fas fa-folder-open"></i> Projects</span>
-          <h2 class="section-title">Things I've Built</h2>
+          <div class="projects-header-top">
+            <div>
+              <span class="section-label">
+              <i class="fas fa-folder-open"></i> Projects</span>
+              <h2 class="section-title">Things I've Built</h2>
+            </div>
+            <div class="project-tabs">
+              <button class="project-tab active" data-tab="development">Development</button>
+              <button class="project-tab" data-tab="design">Design</button>
+            </div>
+
+          </div>
         </div>
-        <div class="projects-grid">
-          <!-- Project 1: Leo Revita MS -->
-          <div
-            class="project-card reveal"
-            data-long-description="Leo Revita MS is a salon management system developed to help streamline daily operations for a local hair salon. The business relied heavily on manual scheduling, paper records, and spreadsheets, which often led to inefficiencies when managing appointments, customers, inventory, and employee information.<br><br>The system brings these processes into a single platform with modules for appointment scheduling, customer management, employee records, inventory tracking, service management, and sales reporting. Throughout development, the focus was on creating a workflow that would be practical for everyday use while remaining easy to navigate for both staff and management.<br><br>By digitizing routine tasks and centralizing business data, the project demonstrates how a tailored information system can improve operational efficiency, reduce administrative workload, and support better decision-making.">
+        
+        <div class="tab-content active" id="development-tab">
+          <div class="projects-grid">
+            <!-- Project 1: Leo Revita MS -->
             <div
-              class="card-image"
-              data-images='[
-    "assets/projects/Hair Salon/landing.png",
-    "assets/projects/Hair Salon/admin-dashboard.png",
-    "assets/projects/Hair Salon/admin-employees.png",
-    "assets/projects/Hair Salon/admin-apptDetails.png",
-    "assets/projects/Hair Salon/admin-editService.png",
-    "assets/projects/Hair Salon/admin-profile.png",
-    "assets/projects/Hair Salon/login.png",
-    "assets/projects/Hair Salon/user-services.png"
-  ]'>
-              <img src="assets/projects/Hair Salon/landing.png" alt="Leo Revita MS" loading="lazy"/>
+              class="project-card reveal"
+              data-long-description="Leo Revita MS is a salon management system developed to help streamline daily operations for a local hair salon. The business relied heavily on manual scheduling, paper records, and spreadsheets, which often led to inefficiencies when managing appointments, customers, inventory, and employee information.<br><br>The system brings these processes into a single platform with modules for appointment scheduling, customer management, employee records, inventory tracking, service management, and sales reporting. Throughout development, the focus was on creating a workflow that would be practical for everyday use while remaining easy to navigate for both staff and management.<br><br>By digitizing routine tasks and centralizing business data, the project demonstrates how a tailored information system can improve operational efficiency, reduce administrative workload, and support better decision-making.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/Hair Salon/landing.png",
+      "assets/projects/Hair Salon/admin-dashboard.png",
+      "assets/projects/Hair Salon/admin-employees.png",
+      "assets/projects/Hair Salon/admin-apptDetails.png",
+      "assets/projects/Hair Salon/admin-editService.png",
+      "assets/projects/Hair Salon/admin-profile.png",
+      "assets/projects/Hair Salon/login.png",
+      "assets/projects/Hair Salon/user-services.png"
+    ]'>
+                <img src="assets/projects/Hair Salon/landing.png" alt="Leo Revita MS" loading="lazy"/>
 
-              <div class="overlay"></div>
+                <div class="overlay"></div>
 
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">8</span>
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">8</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
               </div>
+              <div class="card-body">
+                <span class="category"></i> Business Systems</span>
+                <div class="project-title">Leo Revita MS</div>
+                <div class="project-date">Feb 2026 – May 2026</div>
+                <div class="project-sub">
+                  Hair Salon Management System — appointment scheduling, customer
+                  management, inventory, employee management, and sales tracking.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">Laravel</span>
+                  <span class="tech">PHP</span>
+                  <span class="tech">MySQL</span>
+                  <span class="tech">JavaScript</span>
+                  <span class="tech">HTML</span>
+                  <span class="tech">CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/christianj-cc/Hair-Salon-MS" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
 
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
+            <!-- Project 2: Email & SMS Phishing Detection -->
+            <div
+              class="project-card reveal"
+              data-long-description="This project was developed as part of a research study exploring the use of machine learning for phishing detection across both email and SMS platforms. With phishing attacks becoming increasingly sophisticated, the goal was to build a system capable of identifying malicious messages while maintaining strong classification performance.<br><br>The application combines data preprocessing, TF-IDF feature extraction, and machine learning models including SVM, Random Forest, and XGBoost. Multiple approaches were evaluated and compared to determine the most effective solution, with a focus on balancing accuracy, precision, recall, and real-world practicality.<br><br>The project provided valuable experience in machine learning workflows, model evaluation, research methodology, and the application of AI techniques to cybersecurity challenges.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/Phishing/Screenshot_(968).png",
+      "assets/projects/Phishing/Screenshot_(969).png",
+      "assets/projects/Phishing/Screenshot_(973).png",
+      "assets/projects/Phishing/Screenshot_(974).png"
+    ]'>
+                <img src="assets/projects/Phishing/Screenshot_(968).png" alt="Phishing Detection" loading="lazy"/>
 
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
+                <div class="overlay"></div>
 
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">4</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="category"></i> AI & Cybersecurity</span>
+                <div class="project-title">Email & SMS Phishing Detection</div>
+                <div class="project-date">Jan 2026 – Mar 2026</div>
+                <div class="project-sub">
+                  AI-powered phishing detection using Scikit-learn, XGBoost, and
+                  Pandas with a custom SVM-XGBoost ensemble model.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">Python</span>
+                  <span class="tech">Scikit-learn</span>
+                  <span class="tech">XGBoost</span>
+                  <span class="tech">Pandas</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/christianj-cc/phishing-detection-app" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
+
+            <!-- Project 3: IrisHR -->
+            <div
+              class="project-card reveal"
+              data-long-description="IrisHR is a web-based human resource management system designed to support employee administration and internal business processes. The project was created to address common challenges faced by organizations when managing employee information, attendance records, and payroll-related tasks through manual methods.<br><br>The platform includes employee management, attendance monitoring, payroll processing, and role-based access controls within a centralized system. Additional attention was given to usability, organization of records, and basic security practices to ensure data could be managed efficiently and responsibly.<br><br>The project provided experience in developing larger business applications while exploring how technology can improve organizational workflows and information management.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/Iris HR/login.png",
+      "assets/projects/Iris HR/landing.png",
+      "assets/projects/Iris HR/admin-dashboard.png",
+      "assets/projects/Iris HR/admin-employee.png",
+      "assets/projects/Iris HR/admin-viewEmployees.png"
+    ]'>
+                <img src="assets/projects/Iris HR/login.png" alt="Iris HR" loading="lazy"/>
+
+                <div class="overlay"></div>
+
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">5</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="category"></i> Business Systems</span>
+                <div class="project-title">IrisHR</div>
+                <div class="project-date">Jan 2025 – Mar 2026</div>
+                <div class="project-sub">
+                  Web-based Human Resource Management System with employee
+                  management, attendance, payroll, and cybersecurity enhancements.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">PHP</span>
+                  <span class="tech">MySQL</span>
+                  <span class="tech">JavaScript</span>
+                  <span class="tech">HTML</span>
+                  <span class="tech">CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/christianj-cc/Iris-HR" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
+
+            <!-- Project 4: Tumba Lata -->
+            <div
+              class="project-card reveal"
+              data-long-description="Tumba Lata is a 2D physics-based arcade game inspired by traditional carnival can-knockdown games. The objective is simple: throw a slipper and knock down the target can using as few attempts as possible, but the challenge comes from mastering distance, angle, and timing.<br><br>Developed in Godot using GDScript, the project involved implementing custom projectile mechanics, scoring systems, level progression, visual feedback, and performance-based star ratings. A significant part of development focused on refining gameplay feel and balancing the physics to create a satisfying player experience.<br><br>The project served as a deeper exploration of game development principles while combining technical implementation with iterative design and user experience considerations.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/Tumba Lata/1.png",
+      "assets/projects/Tumba Lata/2.png",
+      "assets/projects/Tumba Lata/0.png",
+      "assets/projects/Tumba Lata/4.png",
+      "assets/projects/Tumba Lata/7.png",
+      "assets/projects/Tumba Lata/10.png",
+      "assets/projects/Tumba Lata/9.png"
+    ]'>
+                <img src="assets/projects/Tumba Lata/1.png" alt="Leo Revita MS" loading="lazy"/>
+
+                <div class="overlay"></div>
+
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">7</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="category"></i> Game Development</span>
+                <div class="project-title">Tumba Lata</div>
+                <div class="project-date">Aug 2025 – Oct 2025</div>
+                <div class="project-sub">
+                  2D physics-based arcade game in Godot. Throw a slipper at a
+                  target can with realistic motion and scoring.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">Godot Engine</span>
+                  <span class="tech">GDScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://artnodes.itch.io/tumba-lata" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp Live
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
+
+            <!-- Project 5: Hazey's Crochet -->
+            <div
+              class="project-card reveal"
+              data-long-description="Hazey's Crochet is an online business management platform developed for a handmade crochet business. As the business expanded, managing products, orders, inventory, and customer interactions through manual methods became increasingly difficult, creating a need for a more organized digital solution.<br><br>The system was designed to centralize business operations through features such as product management, order tracking, inventory monitoring, and customer relationship management. The goal was to create a practical platform that could support day-to-day operations while improving overall efficiency and organization.<br><br>This project highlights the use of web technologies to support small businesses and demonstrates how customized systems can help streamline business growth.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/Hazeys Crochet/landing.png",
+      "assets/projects/Hazeys Crochet/login.png",
+      "assets/projects/Hazeys Crochet/shop.png",
+      "assets/projects/Hazeys Crochet/cart.png",
+      "assets/projects/Hazeys Crochet/admin-orders.png",
+      "assets/projects/Hazeys Crochet/admin-products.png",
+      "assets/projects/Hazeys Crochet/register.png"
+    ]'>
+                <img src="assets/projects/Hazeys Crochet/landing.png" alt="Hazey's Crochet" loading="lazy"/>
+
+                <div class="overlay"></div>
+
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">7</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="category"></i> Business Systems</span>
+                <div class="project-title">Hazey's Crochet</div>
+                <div class="project-date">Oct 2024 – Dec 2024</div>
+                <div class="project-sub">
+                  Online business management platform for a handmade crochet
+                  business. Simplifies order management, inventory, and CRM.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">PHP</span>
+                  <span class="tech">MySQL</span>
+                  <span class="tech">JavaScript</span>
+                  <span class="tech">HTML</span>
+                  <span class="tech">CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/christianj-cc/Hazeys-Crochet" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
+
+            <!-- Project 6: Brewed & Blended -->
+            <div
+              class="project-card reveal"
+              data-long-description="Brewed & Blended is a desktop café ordering system created to simplify the ordering and transaction process for small coffee shop environments. The project was developed as an opportunity to apply object-oriented programming concepts and database integration within a real-world business scenario.<br><br>Built using Java Swing, JDBC, and MySQL, the application supports menu management, order processing, receipt generation, and transaction tracking through a graphical user interface. Particular attention was given to creating a clean workflow that could be easily understood by both staff and customers.<br><br>The project strengthened my understanding of desktop application development, database connectivity, and designing software solutions around everyday business operations.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/Brewed&Blended/1a.png",
+      "assets/projects/Brewed&Blended/login.png",
+      "assets/projects/Brewed&Blended/order-add.png",
+      "assets/projects/Brewed&Blended/order-complete.png",
+      "assets/projects/Brewed&Blended/admin-screen.png",
+      "assets/projects/Brewed&Blended/register.png"
+    ]'>
+                <img src="assets/projects/Brewed&Blended/1a.png" alt="Brewed & Blended" loading="lazy"/>
+
+                <div class="overlay"></div>
+
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">6</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="category"></i> Software Applications</span>
+                <div class="project-title">Brewed & Blended</div>
+                <div class="project-date">Aug 2023 – Nov 2023</div>
+                <div class="project-sub">
+                  Java-based Café Ordering System with Swing GUI, JDBC, and MySQL.
+                  Streamlined ordering with receipt generation.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">Java Swing</span>
+                  <span class="tech">JDBC</span>
+                  <span class="tech">MySQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/christianj-cc/Brewed-and-Blended" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
+
+            <!-- Project 7: Tic-Tac-Toe -->
+            <div
+              class="project-card reveal"
+              data-long-description="This Tic-Tac-Toe project was developed in 2022 as an early exploration into game development and interactive programming. While based on a simple and familiar game, the project provided an opportunity for me to learn the foundations of game logic, state management, and user interaction design.<br><br>Built using Godot and GDScript with visuals made by hand, the application includes turn-based gameplay, win and draw detection, game reset functionality, and responsive visual feedback. Development focused on creating a smooth and intuitive experience while building a stronger understanding of game architecture.<br><br>The project represents one of my first steps into game development and laid the groundwork for more advanced projects developed later on.">
+              <div
+                class="card-image"
+                data-images='[
+      "assets/projects/TicTacToe/1.png",
+      "assets/projects/TicTacToe/2.png",
+      "assets/projects/TicTacToe/3.png",
+      "assets/projects/TicTacToe/4.png",
+      "assets/projects/TicTacToe/5.png",
+      "assets/projects/TicTacToe/10.png"
+    ]'>
+                <img src="assets/projects/TicTacToe/3.png" alt="TicTacToe" loading="lazy"/>
+
+                <div class="overlay"></div>
+
+                <div class="image-counter">
+                  <span class="current-image">1</span>/<span class="total-images">6</span>
+                </div>
+
+                <div class="image-controls">
+                  <button class="img-btn img-prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="img-btn img-next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                  <button class="img-btn img-expand">
+                    <i class="fas fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="category"></i> Game Development</span>
+                <div class="project-title">Tic-Tac-Toe</div>
+                <div class="project-date">July 2022 – Oct 2022</div>
+                <div class="project-sub">
+                  Classic strategy game developed in Godot during the COVID-19
+                  pandemic as a personal learning project.
+                </div>
+                <div class="tech-stack">
+                  <span class="tech">Godot Engine</span>
+                  <span class="tech">GDScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://artnodes.itch.io/tic-tac-toe" target="_blank" class="project-btn primary">
+                    <i class="fas fa-external-link-alt"></i>&nbsp Live
+                  </a>
+                </div>
+              </div>
+              <div class="glow-line"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ============================================================
+        DESIGN
+        ============================================================ -->
+        <div class="tab-content" id="design-tab">
+          <div class="design-grid">
+
+            <!-- artwork -->
+
+            <div class="design-item">
+              <img src="assets/projects/Design/gcp.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Character Illustration</h4>
+                <span>Personal Work</span>
               </div>
             </div>
-            <div class="card-body">
-              <span class="category"></i> Business Systems</span>
-              <div class="project-title">Leo Revita MS</div>
-              <div class="project-date">Feb 2026 – May 2026</div>
-              <div class="project-sub">
-                Hair Salon Management System — appointment scheduling, customer
-                management, inventory, employee management, and sales tracking.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">Laravel</span>
-                <span class="tech">PHP</span>
-                <span class="tech">MySQL</span>
-                <span class="tech">JavaScript</span>
-                <span class="tech">HTML</span>
-                <span class="tech">CSS</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/christianj-cc/Hair-Salon-MS" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
-                </a>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/FilipinoArtists.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
               </div>
             </div>
-            <div class="glow-line"></div>
+            
+            <div class="design-item">
+              <img src="assets/projects/Design/3rd.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Character Illustration</h4>
+                <span>Personal Work</span>
+              </div>
+            </div>
+            
+            <div class="design-item">
+              <img src="assets/projects/Design/SpecialMenu1.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Character Illustration</h4>
+                <span>Personal Work</span>
+              </div>
+            </div>
+            
+            <div class="design-item">
+              <img src="assets/projects/Design/JuanSarap with Price.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Character Illustration</h4>
+                <span>Personal Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/mani tarp - 96px.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+            
+            <div class="design-item">
+              <img src="assets/projects/Design/inside_m.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Character Illustration</h4>
+                <span>Personal Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/Pahiyas-min.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+            
+            <div class="design-item">
+              <img src="assets/projects/Design/globe-square.png" alt="Artwork">
+              <div class="design-overlay">
+                <h4>Character Illustration</h4>
+                <span>Personal Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/silya.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/PamalandongSaKalisod-Poster.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/inside_m.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/bnb logo.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/gmo.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/sample2.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
+            <div class="design-item tall">
+              <img src="assets/projects/Design/awss.png"alt="Artwork">
+              <div class="design-overlay">
+                <h4>Commission Piece</h4>
+                <span>Client Work</span>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Project 2: Email & SMS Phishing Detection -->
-          <div
-            class="project-card reveal"
-            data-long-description="This project was developed as part of a research study exploring the use of machine learning for phishing detection across both email and SMS platforms. With phishing attacks becoming increasingly sophisticated, the goal was to build a system capable of identifying malicious messages while maintaining strong classification performance.<br><br>The application combines data preprocessing, TF-IDF feature extraction, and machine learning models including SVM, Random Forest, and XGBoost. Multiple approaches were evaluated and compared to determine the most effective solution, with a focus on balancing accuracy, precision, recall, and real-world practicality.<br><br>The project provided valuable experience in machine learning workflows, model evaluation, research methodology, and the application of AI techniques to cybersecurity challenges.">
-            <div
-              class="card-image"
-              data-images='[
-    "assets/projects/Phishing/Screenshot_(968).png",
-    "assets/projects/Phishing/Screenshot_(969).png",
-    "assets/projects/Phishing/Screenshot_(973).png",
-    "assets/projects/Phishing/Screenshot_(974).png"
-  ]'>
-              <img src="assets/projects/Phishing/Screenshot_(968).png" alt="Phishing Detection" loading="lazy"/>
-
-              <div class="overlay"></div>
-
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">4</span>
-              </div>
-
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="category"></i> AI & Cybersecurity</span>
-              <div class="project-title">Email & SMS Phishing Detection</div>
-              <div class="project-date">Jan 2026 – Mar 2026</div>
-              <div class="project-sub">
-                AI-powered phishing detection using Scikit-learn, XGBoost, and
-                Pandas with a custom SVM-XGBoost ensemble model.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">Python</span>
-                <span class="tech">Scikit-learn</span>
-                <span class="tech">XGBoost</span>
-                <span class="tech">Pandas</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/christianj-cc/phishing-detection-app" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
-                </a>
-              </div>
-            </div>
-            <div class="glow-line"></div>
+          <div class="design-footer">
+            <a href="https://artnodes.wixsite.com/christiancahilig/" target="_blank" class="btn btn-secondary">View Full Design Portfolio<i class="fas fa-arrow-right"></i></a>
           </div>
 
-          <!-- Project 3: IrisHR -->
-          <div
-            class="project-card reveal"
-            data-long-description="IrisHR is a web-based human resource management system designed to support employee administration and internal business processes. The project was created to address common challenges faced by organizations when managing employee information, attendance records, and payroll-related tasks through manual methods.<br><br>The platform includes employee management, attendance monitoring, payroll processing, and role-based access controls within a centralized system. Additional attention was given to usability, organization of records, and basic security practices to ensure data could be managed efficiently and responsibly.<br><br>The project provided experience in developing larger business applications while exploring how technology can improve organizational workflows and information management.">
-            <div
-              class="card-image"
-              data-images='[
-    "assets/projects/Iris HR/login.png",
-    "assets/projects/Iris HR/landing.png",
-    "assets/projects/Iris HR/admin-dashboard.png",
-    "assets/projects/Iris HR/admin-employee.png",
-    "assets/projects/Iris HR/admin-viewEmployees.png"
-  ]'>
-              <img src="assets/projects/Iris HR/login.png" alt="Iris HR" loading="lazy"/>
-
-              <div class="overlay"></div>
-
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">5</span>
-              </div>
-
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="category"></i> Business Systems</span>
-              <div class="project-title">IrisHR</div>
-              <div class="project-date">Jan 2025 – Mar 2026</div>
-              <div class="project-sub">
-                Web-based Human Resource Management System with employee
-                management, attendance, payroll, and cybersecurity enhancements.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">PHP</span>
-                <span class="tech">MySQL</span>
-                <span class="tech">JavaScript</span>
-                <span class="tech">HTML</span>
-                <span class="tech">CSS</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/christianj-cc/Iris-HR" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
-                </a>
-              </div>
-            </div>
-            <div class="glow-line"></div>
-          </div>
-
-          <!-- Project 4: Tumba Lata -->
-          <div
-            class="project-card reveal"
-            data-long-description="Tumba Lata is a 2D physics-based arcade game inspired by traditional carnival can-knockdown games. The objective is simple: throw a slipper and knock down the target can using as few attempts as possible, but the challenge comes from mastering distance, angle, and timing.<br><br>Developed in Godot using GDScript, the project involved implementing custom projectile mechanics, scoring systems, level progression, visual feedback, and performance-based star ratings. A significant part of development focused on refining gameplay feel and balancing the physics to create a satisfying player experience.<br><br>The project served as a deeper exploration of game development principles while combining technical implementation with iterative design and user experience considerations.">
-            <div
-              class="card-image"
-              data-images='[
-    "assets/projects/Tumba Lata/1.png",
-    "assets/projects/Tumba Lata/2.png",
-    "assets/projects/Tumba Lata/0.png",
-    "assets/projects/Tumba Lata/4.png",
-    "assets/projects/Tumba Lata/7.png",
-    "assets/projects/Tumba Lata/10.png",
-    "assets/projects/Tumba Lata/9.png"
-  ]'>
-              <img src="assets/projects/Tumba Lata/1.png" alt="Leo Revita MS" loading="lazy"/>
-
-              <div class="overlay"></div>
-
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">7</span>
-              </div>
-
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="category"></i> Game Development</span>
-              <div class="project-title">Tumba Lata</div>
-              <div class="project-date">Aug 2025 – Oct 2025</div>
-              <div class="project-sub">
-                2D physics-based arcade game in Godot. Throw a slipper at a
-                target can with realistic motion and scoring.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">Godot Engine</span>
-                <span class="tech">GDScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://artnodes.itch.io/tumba-lata" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp Live
-                </a>
-              </div>
-            </div>
-            <div class="glow-line"></div>
-          </div>
-
-          <!-- Project 5: Hazey's Crochet -->
-          <div
-            class="project-card reveal"
-            data-long-description="Hazey's Crochet is an online business management platform developed for a handmade crochet business. As the business expanded, managing products, orders, inventory, and customer interactions through manual methods became increasingly difficult, creating a need for a more organized digital solution.<br><br>The system was designed to centralize business operations through features such as product management, order tracking, inventory monitoring, and customer relationship management. The goal was to create a practical platform that could support day-to-day operations while improving overall efficiency and organization.<br><br>This project highlights the use of web technologies to support small businesses and demonstrates how customized systems can help streamline business growth.">
-            <div
-              class="card-image"
-              data-images='[
-    "assets/projects/Hazeys Crochet/landing.png",
-    "assets/projects/Hazeys Crochet/login.png",
-    "assets/projects/Hazeys Crochet/shop.png",
-    "assets/projects/Hazeys Crochet/cart.png",
-    "assets/projects/Hazeys Crochet/admin-orders.png",
-    "assets/projects/Hazeys Crochet/admin-products.png",
-    "assets/projects/Hazeys Crochet/register.png"
-  ]'>
-              <img src="assets/projects/Hazeys Crochet/landing.png" alt="Hazey's Crochet" loading="lazy"/>
-
-              <div class="overlay"></div>
-
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">7</span>
-              </div>
-
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="category"></i> Business Systems</span>
-              <div class="project-title">Hazey's Crochet</div>
-              <div class="project-date">Oct 2024 – Dec 2024</div>
-              <div class="project-sub">
-                Online business management platform for a handmade crochet
-                business. Simplifies order management, inventory, and CRM.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">PHP</span>
-                <span class="tech">MySQL</span>
-                <span class="tech">JavaScript</span>
-                <span class="tech">HTML</span>
-                <span class="tech">CSS</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/christianj-cc/Hazeys-Crochet" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
-                </a>
-              </div>
-            </div>
-            <div class="glow-line"></div>
-          </div>
-
-          <!-- Project 6: Brewed & Blended -->
-          <div
-            class="project-card reveal"
-            data-long-description="Brewed & Blended is a desktop café ordering system created to simplify the ordering and transaction process for small coffee shop environments. The project was developed as an opportunity to apply object-oriented programming concepts and database integration within a real-world business scenario.<br><br>Built using Java Swing, JDBC, and MySQL, the application supports menu management, order processing, receipt generation, and transaction tracking through a graphical user interface. Particular attention was given to creating a clean workflow that could be easily understood by both staff and customers.<br><br>The project strengthened my understanding of desktop application development, database connectivity, and designing software solutions around everyday business operations.">
-            <div
-              class="card-image"
-              data-images='[
-    "assets/projects/Brewed&Blended/1a.png",
-    "assets/projects/Brewed&Blended/login.png",
-    "assets/projects/Brewed&Blended/order-add.png",
-    "assets/projects/Brewed&Blended/order-complete.png",
-    "assets/projects/Brewed&Blended/admin-screen.png",
-    "assets/projects/Brewed&Blended/register.png"
-  ]'>
-              <img src="assets/projects/Brewed&Blended/1a.png" alt="Brewed & Blended" loading="lazy"/>
-
-              <div class="overlay"></div>
-
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">6</span>
-              </div>
-
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="category"></i> Software Applications</span>
-              <div class="project-title">Brewed & Blended</div>
-              <div class="project-date">Aug 2023 – Nov 2023</div>
-              <div class="project-sub">
-                Java-based Café Ordering System with Swing GUI, JDBC, and MySQL.
-                Streamlined ordering with receipt generation.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">Java Swing</span>
-                <span class="tech">JDBC</span>
-                <span class="tech">MySQL</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/christianj-cc/Brewed-and-Blended" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
-                </a>
-              </div>
-            </div>
-            <div class="glow-line"></div>
-          </div>
-
-          <!-- Project 7: Tic-Tac-Toe -->
-          <div
-            class="project-card reveal"
-            data-long-description="This Tic-Tac-Toe project was developed in 2022 as an early exploration into game development and interactive programming. While based on a simple and familiar game, the project provided an opportunity for me to learn the foundations of game logic, state management, and user interaction design.<br><br>Built using Godot and GDScript with visuals made by hand, the application includes turn-based gameplay, win and draw detection, game reset functionality, and responsive visual feedback. Development focused on creating a smooth and intuitive experience while building a stronger understanding of game architecture.<br><br>The project represents one of my first steps into game development and laid the groundwork for more advanced projects developed later on.">
-            <div
-              class="card-image"
-              data-images='[
-    "assets/projects/TicTacToe/1.png",
-    "assets/projects/TicTacToe/2.png",
-    "assets/projects/TicTacToe/3.png",
-    "assets/projects/TicTacToe/4.png",
-    "assets/projects/TicTacToe/5.png",
-    "assets/projects/TicTacToe/10.png"
-  ]'>
-              <img src="assets/projects/TicTacToe/3.png" alt="TicTacToe" loading="lazy"/>
-
-              <div class="overlay"></div>
-
-              <div class="image-counter">
-                <span class="current-image">1</span>/<span class="total-images">6</span>
-              </div>
-
-              <div class="image-controls">
-                <button class="img-btn img-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <button class="img-btn img-next">
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <button class="img-btn img-expand">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="category"></i> Game Development</span>
-              <div class="project-title">Tic-Tac-Toe</div>
-              <div class="project-date">July 2022 – Oct 2022</div>
-              <div class="project-sub">
-                Classic strategy game developed in Godot during the COVID-19
-                pandemic as a personal learning project.
-              </div>
-              <div class="tech-stack">
-                <span class="tech">Godot Engine</span>
-                <span class="tech">GDScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://artnodes.itch.io/tic-tac-toe" target="_blank" class="project-btn primary">
-                  <i class="fas fa-external-link-alt"></i>&nbsp Live
-                </a>
-              </div>
-            </div>
-            <div class="glow-line"></div>
-          </div>
         </div>
       </div>
     </section>

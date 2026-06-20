@@ -390,11 +390,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  // 12. CERTIFICATE LINK BUTTON (optional console log)
+  // 12. CERTIFICATE LINK BUTTON 
   // ============================================================
   document.querySelectorAll(".cert-link-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       console.log("Certificate link clicked:", e.currentTarget.href);
     });
+  });
+  
+  // ============================================================
+  // 13. DESIGN PROJECTS TAB
+  // ============================================================
+  const tabs = document.querySelectorAll(".project-tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t =>
+        t.classList.remove("active")
+      );
+
+      contents.forEach(c =>
+        c.classList.remove("active")
+      );
+
+      tab.classList.add("active");
+
+      document
+        .getElementById(
+          tab.dataset.tab + "-tab"
+        )
+        .classList.add("active");
+
+    });
+
   });
 });

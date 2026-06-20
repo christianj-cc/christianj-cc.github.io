@@ -852,8 +852,62 @@ section {
   background: var(--accent);
 }
 
+/* ============================================================
+         PROJECT TAB STYLING
+      ============================================================ */
+
+.projects-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+#projects .section-title {
+  margin: 0;
+}
+
+.project-tabs {
+  display: flex;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+
+.project-tab {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.7rem 1rem;
+  border-radius: 18px;
+  font-family: var(--font-title);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.project-tab:hover {
+  border-color: var(--accent);
+  color: white;
+}
+
+.project-tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 /* ==========================================================
-   PROJECT CARDS
+   DEVELOPMENT PROJECTS
 ========================================================== */
 
 .projects-grid {
@@ -1134,6 +1188,65 @@ section {
   border-radius: 999px;
 }
 
+/* ============================================================
+         DESIGN PROJECTS
+      ============================================================ */
+
+.design-grid {
+  columns: 3 300px;
+  column-gap: 1.5rem;
+}
+
+.design-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.design-item img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  transition: 0.5s ease;
+}
+
+.design-item:hover img {
+  transform: scale(1.04);
+}
+
+/* ==========================================================
+   DESIGN PROJECT HOVER OVERLAY
+========================================================== */
+
+.design-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.design-item:hover .design-overlay {
+  opacity: 0;
+}
+
+/* ==========================================================
+   DESIGN BUTTON
+========================================================== */
+
+.design-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 /* ==========================================================
    CERTIFICATIONS
 ========================================================== */
@@ -1174,7 +1287,6 @@ h2 {
   gap: 2rem;
   width: max-content;
   animation: scrollCerts 25s linear infinite;
-
   overflow: visible;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1355,40 +1467,40 @@ h2 {
    CERT CONTROLS
 ========================================================== */
 
-.cert-controls{
-    position:absolute;
-    top:12px;
-    right:12px;
-    opacity:0;
-    transform:translateY(-10px);
-    transition:.3s ease;
-    z-index:20;
+.cert-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+  z-index: 20;
 }
 
-.cert-card:hover .cert-controls{
-    opacity:1;
-    transform:translateY(0);
+.cert-card:hover .cert-controls {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.cert-link-btn{
-    width:42px;
-    height:42px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:rgba(0,0,0,.7);
-    backdrop-filter:blur(10px);
-    color:white;
+.cert-link-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  color: white;
 }
 
-.cert-image:hover .cert-link-btn{
-    transform:translateY(0);
+.cert-image:hover .cert-link-btn {
+  transform: translateY(0);
 }
 
-.cert-link-btn:hover{
-    transform:scale(1.08);
-    background:var(--accent-light);
+.cert-link-btn:hover {
+  transform: scale(1.08);
+  background: var(--accent-light);
 }
 
 /* ==========================================================
@@ -1454,11 +1566,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
-    to top,
-    var(--bg-primary) 25%,
-    transparent 90%
-  );
+  background: linear-gradient(to top, var(--bg-primary) 25%, transparent 90%);
   transition:
     opacity 0.25s ease,
     transform 0.25s ease,
@@ -1757,9 +1865,9 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  display:flex;
-  flex-direction:column;
-  overflow-y:auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .modal-right h2 {
@@ -1841,9 +1949,9 @@ footer {
   padding: 0;
 }
 
-.modal-links{
-    margin-top:auto;
-    padding-top:1rem;
+.modal-links {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .modal-links a {
@@ -1861,8 +1969,6 @@ footer {
   background: var(--accent-opp);
   color: var(--bg-card);
 }
-
-
 
 /* ============================================================
          RESPONSIVE
@@ -1887,6 +1993,9 @@ footer {
   }
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .project-tabs {
+    margin-bottom: 0.5rem;
   }
   .cert-grid {
     grid-template-columns: 1fr;
@@ -1960,6 +2069,14 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+  .projects-header-top {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .project-tabs {
+    margin-bottom: 0;
+  }
   body {
     cursor: auto;
   }
@@ -1977,26 +2094,26 @@ footer {
   #contact .blob-2 {
     display: none;
   }
-  .modal-container{
-      grid-template-columns:1fr;
-      gap:1.5rem;
-      max-height:90vh;
-      overflow-y:auto;
+  .modal-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-height: 90vh;
+    overflow-y: auto;
   }
-  .modal-left{
-    order:1;
-    height:280px;
+  .modal-left {
+    order: 1;
+    height: 280px;
   }
-  .modal-right{
-    order:2;
+  .modal-right {
+    order: 2;
   }
-  .modal-image{
-    height:100%;
+  .modal-image {
+    height: 100%;
   }
-  .modal-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -2035,4 +2152,3 @@ footer {
     cursor: auto;
   }
 }
-
