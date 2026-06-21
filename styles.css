@@ -2036,8 +2036,8 @@ footer {
     gap: 28px;
   }
   .about-avatar {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
   .edu-timeline {
     padding-left: 25px;
@@ -2123,8 +2123,8 @@ footer {
     font-size: clamp(2.2rem, 10vw, 3rem);
   }
   .about-avatar {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
   .about-skills-inline .skill-icon {
     width: 38px;
