@@ -782,7 +782,7 @@ section {
 .edu-item .edu-marker {
   position: absolute;
   left: -40px;
-  top: 28px;
+  top: 10px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -2040,7 +2040,7 @@ footer {
     height: 150px;
   }
   .edu-timeline {
-    padding-left: 16px;
+    padding-left: 25px;
   }
   .edu-item {
     padding: 16px 0 16px 20px;
@@ -2049,7 +2049,7 @@ footer {
     left: -14px;
     width: 12px;
     height: 12px;
-    top: 24px;
+    top: 10px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -2079,9 +2079,6 @@ footer {
   }
   body {
     cursor: auto;
-  }
-  .cert-card {
-    padding: 14px 16px;
   }
   .cert-card .icon-wrap {
     width: 34px;
