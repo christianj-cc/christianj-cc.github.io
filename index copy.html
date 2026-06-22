@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christian Cahilig · Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div id="custom-cursor">
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M8 8L24 24M8 8V20M8 8H20" />
+      </svg>
+      <div class="cursor-ring"></div>
+    </div>
+
+    <!-- ===== TOAST ===== -->
+    <div class="toast" id="toast">
+      <i class="fas fa-check-circle"></i>
+      <span id="toastMsg">Message sent!</span>
+    </div>
+
+    <!-- ===== NAV ===== -->
+    <nav id="navbar">
+      <div class="container nav-inner">
+        <a href="#" class="nav-logo">C<span>.</span></a>
+        <div class="nav-links-wrapper">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#about" data-section="about">About</a></li>
+            <li><a href="#projects" data-section="projects">Projects</a></li>
+            <li><a href="#education" data-section="education">Education</a></li>
+            <li>
+              <a href="#certifications" data-section="certifications"
+                >Certifications</a
+              >
+            </li>
+            <li><a href="#contact" data-section="contact">Contact</a></li>
+          </ul>
+        </div>
+        <button class="nav-resume-btn" id="downloadResume">Resume</button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div id="progress-bar"></div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+    HERO 
+    ============================================================ -->
+    <section id="hero">
+      <div class="hero-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="hero-bg-layer">
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="name-wrap">
+          <span class="scramble-text" id="scrambleName">
+            Christian Cahilig
+          </span>
+        </div>
+
+        <div class="subtitle-wrap">
+          <p class="subtitle-line">
+            <span id="subtitle-typing"></span>
+            <span class="typing-cursor"></span>
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-arrow-down"></i>
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i>
+            Contact
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    ABOUT
+    ============================================================ -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label"><i class="fas fa-user"></i> About</span>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-avatar reveal-scale">
+            <img src="assets/casual_pic.jpg" alt="Christian Cahilig" />
+          </div>
+          <div class="about-text reveal-right">
+            <p>
+              I'm <strong>Christian James Cahilig</strong>, a Computer Science
+              student and software developer with experience in web development,
+              machine learning, cybersecurity, and game development.
+            </p>
+            <p>
+              I've built management systems, AI-powered phishing detection
+              tools, and game projects — strengthening my skills in programming,
+              software design, and turning ideas into practical applications.
+            </p>
+            <p>
+              For me, development is about creating solutions people actually
+              use and benefit from. I'm constantly exploring new technologies to
+              build software that is both functional and impactful.
+            </p>
+
+            <div class="about-skills-inline">
+              <span class="skill-icon" title="PHP"
+                ><i class="fab fa-php"></i
+              ></span>
+              <span class="skill-icon" title="Java"
+                ><i class="fab fa-java"></i
+              ></span>
+              <span class="skill-icon" title="Python"
+                ><i class="fab fa-python"></i
+              ></span>
+              <span class="skill-icon" title="JavaScript"
+                ><i class="fab fa-js"></i
+              ></span>
+              <span class="skill-icon" title="SQL"
+                ><i class="fas fa-database"></i
+              ></span>
+              <span class="skill-icon" title="Laravel"
+                ><i class="fab fa-laravel"></i
+              ></span>
+              <span class="skill-icon" title="Bootstrap"
+                ><i class="fab fa-bootstrap"></i
+              ></span>
+              <span class="skill-icon" title="Git"
+                ><i class="fab fa-git-alt"></i
+              ></span>
+              <span class="skill-icon" title="Godot"
+                ><i class="fas fa-gamepad"></i
+              ></span>
+              <span class="skill-icon" title="Scikit-learn"
+                ><i class="fas fa-brain"></i
+              ></span>
+              <span class="skill-icon" title="Figma"
+                ><i class="fas fa-pencil-ruler"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    QUOTE SECTION — scroll-driven: shape + text move upward
+    ============================================================ -->
+    <section id="quote-scroll">
+      <div class="quote-sticky">
+        <div class="quote-square"></div>
+
+        <h2 class="quote-text">
+          BUILDING
+          <br />
+          PRACTICAL
+          <br />
+          SOLUTIONS
+          <br />
+          THROUGH CODE
+        </h2>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    PROJECTS — Hardcoded HTML
+    ============================================================ -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label"
+            ><i class="fas fa-folder-open"></i> Projects</span
+          >
+          <h2 class="section-title">Things I've Built</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1: Leo Revita MS -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/leorevita/800/450"
+                alt="Leo Revita MS"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> Business Systems</span
+              >
+              <div class="project-title">Leo Revita MS</div>
+              <div class="project-sub">
+                Hair Salon Management System — appointment scheduling, customer
+                management, inventory, employee management, and sales tracking.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">Laravel</span>
+                <span class="tech">PHP</span>
+                <span class="tech">MySQL</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+              </div>
+              <div class="card-links">
+                <a
+                  href="https://github.com/christianj-cc/Hair-Salon-MS"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- Project 2: Email & SMS Phishing Detection -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/phishing/800/450"
+                alt="Email & SMS Phishing Detection"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> AI & Cybersecurity</span
+              >
+              <div class="project-title">Email & SMS Phishing Detection</div>
+              <div class="project-sub">
+                AI-powered phishing detection using Scikit-learn, XGBoost, and
+                Pandas with a custom SVM-XGBoost ensemble model.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">Python</span>
+                <span class="tech">Scikit-learn</span>
+                <span class="tech">XGBoost</span>
+                <span class="tech">Pandas</span>
+              </div>
+              <div class="card-links">
+                <a
+                  href="https://github.com/christianj-cc/phishing-detection-app"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- Project 3: Brewed & Blended -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/brewed/800/450"
+                alt="Brewed & Blended"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> Software Applications</span
+              >
+              <div class="project-title">Brewed & Blended</div>
+              <div class="project-sub">
+                Java-based Café Ordering System with Swing GUI, JDBC, and MySQL.
+                Streamlined ordering with receipt generation.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">Java Swing</span>
+                <span class="tech">JDBC</span>
+                <span class="tech">MySQL</span>
+              </div>
+              <div class="card-links">
+                <a
+                  href="https://github.com/christianj-cc/Brewed-and-Blended"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- Project 4: Tumba Lata -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/tumbalata/800/450"
+                alt="Tumba Lata"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> Game Development</span
+              >
+              <div class="project-title">Tumba Lata</div>
+              <div class="project-sub">
+                2D physics-based arcade game in Godot. Throw a slipper at a
+                target can with realistic motion and scoring.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">Godot Engine</span>
+                <span class="tech">GDScript</span>
+              </div>
+              <div class="card-links">
+                <a
+                  href="https://artnodes.itch.io/tumba-lata"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp Live
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- Project 5: IrisHR -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/irishr/800/450"
+                alt="IrisHR"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> Business Systems</span
+              >
+              <div class="project-title">IrisHR</div>
+              <div class="project-sub">
+                Web-based Human Resource Management System with employee
+                management, attendance, payroll, and cybersecurity enhancements.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">PHP</span>
+                <span class="tech">MySQL</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+              </div>
+              <div class="card-links">
+                <a
+                  href="https://github.com/christianj-cc/Iris-HR"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- Project 6: Hazey's Crochet -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/hazeys/800/450"
+                alt="Hazey's Crochet"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> Business Systems</span
+              >
+              <div class="project-title">Hazey's Crochet</div>
+              <div class="project-sub">
+                Online business management platform for a handmade crochet
+                business. Simplifies order management, inventory, and CRM.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">PHP</span>
+                <span class="tech">MySQL</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/christianj-cc/Hazeys-Crochet"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp GitHub
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- Project 7: Tic-Tac-Toe -->
+          <div class="project-card reveal">
+            <div class="card-image">
+              <img
+                src="https://picsum.photos/seed/tictac/800/450"
+                alt="Tic-Tac-Toe"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <span class="category"
+                ><i class="fas fa-tag"></i> Game Development</span
+              >
+              <div class="project-title">Tic-Tac-Toe</div>
+              <div class="project-sub">
+                Classic strategy game developed in Godot during the COVID-19
+                pandemic as a personal learning project.
+              </div>
+              <div class="tech-stack">
+                <span class="tech">Godot Engine</span>
+                <span class="tech">GDScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://artnodes.itch.io/tic-tac-toe"
+                  target="_blank"
+                  class="project-btn primary"
+                >
+                  <i class="fas fa-external-link-alt"></i>&nbsp Live
+                </a>
+              </div>
+            </div>
+            <div class="glow-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    EDUCATION
+    ============================================================ -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label"
+            ><i class="fas fa-graduation-cap"></i> Education</span
+          >
+          <h2 class="section-title">Academic Journey</h2>
+        </div>
+
+        <div class="edu-timeline">
+          <div class="edu-item reveal-left">
+            <div class="edu-marker"></div>
+            <div class="edu-content">
+              <div class="title">Bachelor of Science in Computer Science</div>
+              <div class="school">University of Mindanao</div>
+              <div class="meta">
+                <span><i class="fas fa-calendar-alt"></i> Expected 2027</span>
+                <span><i class="fas fa-user-graduate"></i> Undergraduate</span>
+                <span class="honor"
+                  ><i class="fas fa-star"></i> With Honors</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="edu-item reveal-left" style="transition-delay: 0.08s">
+            <div class="edu-marker"></div>
+            <div class="edu-content">
+              <div class="title">Humanities and Social Sciences</div>
+              <div class="school">San Pedro College</div>
+              <div class="meta">
+                <span><i class="fas fa-calendar-alt"></i> 2018 – 2020</span>
+                <span
+                  ><i class="fas fa-user-graduate"></i> Senior High School</span
+                >
+                <span class="honor"
+                  ><i class="fas fa-star"></i> With Honors</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="edu-item reveal-left" style="transition-delay: 0.16s">
+            <div class="edu-marker"></div>
+            <div class="edu-content">
+              <div class="title">Dean's Lister – First Honor</div>
+              <div class="school">University of Mindanao (Main Campus)</div>
+              <div class="meta">
+                <span><i class="fas fa-calendar-alt"></i> 2023 – Present</span>
+                <span
+                  ><i class="fas fa-trophy"></i> Consistent academic
+                  excellence</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    CERTIFICATIONS
+    ============================================================ -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label"
+            ><i class="fas fa-graduation-cap"></i> Certifications</span
+          >
+          <h2 class="section-title">Credentials</h2>
+        </div>
+      </div>
+
+      <div class="cert-carousel">
+        <div class="cert-track">
+          <!-- Java -->
+          <article class="cert-card">
+            <div class="cert-image">
+              <img
+                src="assets/certifications/java-1.png"
+                alt="IT Specialist Java"
+              />
+            </div>
+            <div class="cert-content">
+              <span class="cert-provider">Certiport</span>
+              <h3>IT Specialist – Java</h3>
+              <p class="cert-date">Issued March 8, 2024</p>
+              <p class="cert-description">
+                Demonstrated competency in Java programming, object-oriented
+                development, and software fundamentals.
+              </p>
+            </div>
+          </article>
+
+          <!-- Database -->
+          <article class="cert-card">
+            <div class="cert-image">
+              <img
+                src="assets/certifications/databases-1.png"
+                alt="IT Specialist Databases"
+              />
+            </div>
+            <div class="cert-content">
+              <span class="cert-provider">Certiport</span>
+              <h3>IT Specialist – Databases</h3>
+              <p class="cert-date">Issued March 10, 2025</p>
+              <p class="cert-description">
+                Validated knowledge in database design, SQL, normalization, and
+                relational database management.
+              </p>
+            </div>
+          </article>
+
+          <!-- Network Security -->
+          <article class="cert-card">
+            <div class="cert-image">
+              <img
+                src="assets/certifications/network_security-1.png"
+                alt="IT Specialist Network Security"
+              />
+            </div>
+            <div class="cert-content">
+              <span class="cert-provider">Certiport</span>
+              <h3>IT Specialist – Network Security</h3>
+              <p class="cert-date">Issued March 9, 2026</p>
+              <p class="cert-description">
+                Demonstrated understanding of network protection, threat
+                mitigation, security controls, and cybersecurity principles.
+              </p>
+            </div>
+          </article>
+
+          <!-- Java -->
+          <article class="cert-card">
+            <div class="cert-image">
+              <img
+                src="assets/certifications/java-1.png"
+                alt="IT Specialist Java"
+              />
+            </div>
+            <div class="cert-content">
+              <span class="cert-provider">Certiport</span>
+              <h3>IT Specialist – Java</h3>
+              <p class="cert-date">Issued March 8, 2024</p>
+              <p class="cert-description">
+                Demonstrated competency in Java programming, object-oriented
+                development, and software fundamentals.
+              </p>
+            </div>
+          </article>
+
+          <!-- Database -->
+          <article class="cert-card">
+            <div class="cert-image">
+              <img
+                src="assets/certifications/databases-1.png"
+                alt="IT Specialist Databases"
+              />
+            </div>
+            <div class="cert-content">
+              <span class="cert-provider">Certiport</span>
+              <h3>IT Specialist – Databases</h3>
+              <p class="cert-date">Issued March 10, 2025</p>
+              <p class="cert-description">
+                Validated knowledge in database design, SQL, normalization, and
+                relational database management.
+              </p>
+            </div>
+          </article>
+
+          <!-- Network Security -->
+          <article class="cert-card">
+            <div class="cert-image">
+              <img
+                src="assets/certifications/network_security-1.png"
+                alt="IT Specialist Network Security"
+              />
+            </div>
+            <div class="cert-content">
+              <span class="cert-provider">Certiport</span>
+              <h3>IT Specialist – Network Security</h3>
+              <p class="cert-date">Issued March 9, 2026</p>
+              <p class="cert-description">
+                Demonstrated understanding of network protection, threat
+                mitigation, security controls, and cybersecurity principles.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    CONTACT
+    ============================================================ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <div class="section-header reveal">
+              <span class="section-label"
+                ><i class="fas fa-envelope"></i> Contact</span
+              >
+              <h2 class="section-title">Let's Connect</h2>
+              <p class="section-desc">
+                I'm currently seeking internship opportunities in software
+                development, machine learning, cybersecurity, and related
+                technology fields. Feel free to reach out.
+              </p>
+            </div>
+            <div class="contact-info">
+              <h3>Get in touch</h3>
+              <p>I'm always open to new opportunities and conversations.</p>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>christianjccahilig@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>0949 565 5839</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Pampanga, Davao City</span>
+              </div>
+              <div
+                class="contact-item"
+                style="border-bottom: none; padding-top: 16px"
+              >
+                <i class="fas fa-share-alt"></i>
+                <div class="social-group">
+                  <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                  <a href="#" title="Messenger"
+                    ><i class="fab fa-facebook-messenger"></i
+                  ></a>
+                  <a
+                    href="https://github.com/christianj-cc"
+                    target="_blank"
+                    title="GitHub"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a href="#" title="LinkedIn"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form reveal-right">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="formName"><i class="fas fa-user"></i> Name</label>
+                <input
+                  type="text"
+                  id="formName"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="formEmail"
+                  ><i class="fas fa-envelope"></i> Email</label
+                >
+                <input
+                  type="email"
+                  id="formEmail"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="formMessage"
+                  ><i class="fas fa-comment"></i> Message</label
+                >
+                <textarea
+                  id="formMessage"
+                  placeholder="Tell me about your opportunity..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">CHRISTIAN JAMES CAHILIG</div>
+            <p>Software Developer · Computer Science Student</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-envelope"></i> Email</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-messenger"></i> Messenger</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/christianj-cc" target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >&copy; 2026 Christian Cahilig.
+            <i class="fas fa-heart" style="color: var(--accent)"></i
+          ></span>
+          <div class="footer-socials">
+            <a
+              href="https://github.com/christianj-cc"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" aria-label="Twitter"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+      // ============================================================
+      // SCRAMBLE EFFECT
+      // ============================================================
+      (function scrambleName() {
+        const el = document.getElementById("scrambleName");
+        const original = "Christian Cahilig";
+        const chars =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=";
+        let iteration = 0;
+        const speed = 110;
+
+        function scramble() {
+          let output = "";
+          for (let i = 0; i < original.length; i++) {
+            if (i < iteration) {
+              output += original[i];
+            } else {
+              output += chars[Math.floor(Math.random() * chars.length)];
+            }
+          }
+          el.textContent = output;
+
+          if (iteration < original.length) {
+            iteration++;
+            setTimeout(scramble, speed);
+          } else {
+            el.textContent = original;
+          }
+        }
+        setTimeout(scramble, 600);
+      })();
+
+      // ============================================================
+      // TYPING EFFECT
+      // ============================================================
+      (function typingEffect() {
+        const subtitles = ["Software Developer", "Computer Science Student"];
+        let subIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeElement = document.getElementById("subtitle-typing");
+
+        function type() {
+          const current = subtitles[subIndex];
+          if (!isDeleting) {
+            typeElement.textContent = current.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === current.length) {
+              setTimeout(() => (isDeleting = true), 1800);
+            }
+          } else {
+            typeElement.textContent = current.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+              isDeleting = false;
+              subIndex = (subIndex + 1) % subtitles.length;
+            }
+          }
+          setTimeout(type, isDeleting ? 40 : 100);
+        }
+        type();
+      })();
+
+      // ============================================================
+      // QUOTE SCROLL — shape and text move upward as scroll progresses
+      // ============================================================
+      (function quoteScroll() {
+        const section = document.getElementById("quote-scroll");
+        const square = document.querySelector(".quote-square");
+        const text = document.querySelector(".quote-text");
+
+        function update() {
+          const rect = section.getBoundingClientRect();
+
+          const progress = Math.max(
+            0,
+            Math.min(1, (window.innerHeight - rect.top) / section.offsetHeight),
+          );
+
+          const scale = 1.4 - progress * 0.7;
+
+          text.style.transform = `scale(${scale})`;
+        }
+
+        update();
+
+        window.addEventListener("scroll", update);
+        window.addEventListener("resize", update);
+      })();
+
+      // ============================================================
+      // CUSTOM CURSOR
+      // ============================================================
+      (function initCursor() {
+        const cursor = document.getElementById("custom-cursor");
+        if (!cursor) return;
+        let mouseX = 0,
+          mouseY = 0;
+        let cursorX = 0,
+          cursorY = 0;
+
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+          cursorX += (mouseX - cursorX) * 0.15;
+          cursorY += (mouseY - cursorY) * 0.15;
+          cursor.style.left = cursorX - 8 + "px";
+          cursor.style.top = cursorY - 8 + "px";
+          requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        const interactive = document.querySelectorAll(
+          "a, button, .btn, .project-card, .skill-icon, .edu-item, .cert-card, .nav-resume-btn, .credly-btn",
+        );
+        interactive.forEach((el) => {
+          el.addEventListener("mouseenter", () =>
+            cursor.classList.add("hover"),
+          );
+          el.addEventListener("mouseleave", () =>
+            cursor.classList.remove("hover"),
+          );
+        });
+
+        if ("ontouchstart" in window) {
+          cursor.style.display = "none";
+        }
+      })();
+
+      // ============================================================
+      // NAV: ACTIVE SECTION + PROGRESS BAR
+      // ============================================================
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      const progressBar = document.getElementById("progress-bar");
+      const navbar = document.getElementById("navbar");
+
+      function updateNavAndProgress() {
+        const scrollY = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+        progressBar.style.width = progress + "%";
+
+        const heroHeight = document.getElementById("hero").offsetHeight;
+        if (scrollY > heroHeight * 0.8) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+        let currentSection = "";
+        sections.forEach((sec) => {
+          const top = sec.offsetTop - 80;
+          const height = sec.offsetHeight;
+          if (scrollY >= top && scrollY < top + height) {
+            currentSection = sec.id;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          const section = link.dataset.section;
+          link.classList.toggle("active", section === currentSection);
+        });
+      }
+
+      window.addEventListener("scroll", updateNavAndProgress);
+      window.addEventListener("load", updateNavAndProgress);
+
+      // ============================================================
+      // HAMBURGER
+      // ============================================================
+      const hamburger = document.getElementById("hamburger");
+      const navLinksContainer = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinksContainer.classList.toggle("open");
+      });
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinksContainer.classList.remove("open");
+        });
+      });
+
+      // ============================================================
+      // RESUME DOWNLOAD
+      // ============================================================
+      document
+        .getElementById("downloadResume")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          showToast("📄 Resume download started!");
+        });
+
+      // ============================================================
+      // CONTACT FORM
+      // ============================================================
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("formName").value.trim();
+        const email = document.getElementById("formEmail").value.trim();
+        const msg = document.getElementById("formMessage").value.trim();
+        if (!name || !email || !msg) {
+          showToast("Please fill out all fields.");
+          return;
+        }
+        showToast(`Thanks ${name}! Your message was sent.`);
+        e.target.reset();
+      });
+
+      // ============================================================
+      // TOAST
+      // ============================================================
+      function showToast(msg) {
+        const toast = document.getElementById("toast");
+        const toastMsg = document.getElementById("toastMsg");
+        toastMsg.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(toast._hide);
+        toast._hide = setTimeout(() => toast.classList.remove("show"), 3500);
+      }
+
+      // ============================================================
+      // SCROLL REVEAL
+      // ============================================================
+      const revealEls = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right, .reveal-scale",
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -20px 0px" },
+      );
+      revealEls.forEach((el) => observer.observe(el));
+
+      console.log("🔥 Christian Cahilig · Portfolio");
+      console.log("🎨 Accent: #b31a00 · Custom cursor · No nav underlines");
+
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+
+          card.style.setProperty("--x", `${e.clientX - rect.left}px`);
+
+          card.style.setProperty("--y", `${e.clientY - rect.top}px`);
+        });
+      });
+
+      const trails = document.querySelectorAll(".cursor-trail");
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      const positions = [];
+
+      for (let i = 0; i < trails.length; i++) {
+        positions.push({
+          x: mouseX,
+          y: mouseY,
+        });
+      }
+
+      function animateTrail() {
+        positions[0].x += (mouseX - positions[0].x) * 0.25;
+        positions[0].y += (mouseY - positions[0].y) * 0.25;
+
+        for (let i = 1; i < positions.length; i++) {
+          positions[i].x += (positions[i - 1].x - positions[i].x) * 0.25;
+
+          positions[i].y += (positions[i - 1].y - positions[i].y) * 0.25;
+        }
+
+        trails.forEach((trail, index) => {
+          trail.style.left = positions[index].x + "px";
+
+          trail.style.top = positions[index].y + "px";
+
+          trail.style.scale = 1 - index * 0.08;
+
+          trail.style.opacity = 1 - index * 0.12;
+        });
+
+        requestAnimationFrame(animateTrail);
+      }
+
+      animateTrail();
+
+      const blobs = document.querySelectorAll(".blob");
+
+      window.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth - 0.5;
+
+        const y = e.clientY / window.innerHeight - 0.5;
+
+        blobs.forEach((blob, index) => {
+          const factor = (index + 1) * 20;
+
+          blob.style.transform = `translate(${x * factor}px,
+                            ${y * factor}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
