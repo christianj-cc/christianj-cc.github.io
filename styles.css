@@ -699,10 +699,18 @@ section {
 .about-skills-inline {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-top: 18px;
   padding-top: 18px;
-  border-top: 1px solid var(--border-color);
+}
+
+.about-skills-inline .soft-skill {
+  border: 1px solid var(--accent);
+  padding: 6px 14px;
+  color: var(--accent-light);
+  font-size: 0.8rem;
+  border-radius: 18px;
+  font-weight: 600;
 }
 
 .about-skills-inline .skill-icon {
@@ -850,6 +858,7 @@ section {
 
 .projects-bg .blob {
   background: var(--accent);
+  display: none;
 }
 
 /* ============================================================
@@ -1538,6 +1547,7 @@ h2 {
 
 .contact-bg .blob {
   background: var(--accent);
+  display: none;
 }
 
 .contact-info h3 {
