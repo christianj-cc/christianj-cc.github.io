@@ -683,7 +683,7 @@ section {
 
 .about-text p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 14px;
 }
@@ -808,7 +808,7 @@ section {
 
 .edu-item .title {
   font-family: var(--font-title);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1px;
 }
@@ -816,7 +816,7 @@ section {
 .edu-item .school {
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .edu-item .meta {
@@ -824,7 +824,7 @@ section {
   flex-wrap: wrap;
   gap: 18px;
   margin-top: 4px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 
@@ -840,7 +840,7 @@ section {
   color: var(--accent);
   padding: 1px 14px;
   border-radius: 100px;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: 600;
   border: 1px solid rgba(179, 26, 0, 0.12);
   margin-left: 2px;
@@ -1561,7 +1561,7 @@ h2 {
 .contact-info p {
   color: var(--text-secondary);
   margin-bottom: 24px;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .contact-links {
