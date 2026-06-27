@@ -21,6 +21,8 @@
   --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   --font: "Google Sans", system-ui, -apple-system, sans-serif;
   --font-title: "Unbounded", "Inter", sans-serif;
+  --title-size: 1.5rem;
+  --p-size: 1rem;
 }
 
 *,
@@ -683,7 +685,7 @@ section {
 
 .about-text p {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: var(--p-size);
   line-height: 1.8;
   margin-bottom: 14px;
 }
@@ -808,7 +810,7 @@ section {
 
 .edu-item .title {
   font-family: var(--font-title);
-  font-size: 1.5rem;
+  font-size: var(--title-size);
   font-weight: 700;
   margin-bottom: 1px;
 }
@@ -824,7 +826,7 @@ section {
   flex-wrap: wrap;
   gap: 18px;
   margin-top: 4px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
@@ -1034,13 +1036,14 @@ section {
 }
 
 .project-title {
-  font-size: 1.55rem;
+  font-size: var(--title-size);
   font-weight: 700;
   font-family: var(--font-title);
 }
 
 .project-sub {
   color: var(--text-secondary);
+  font-size: var(--p-size);
   line-height: 1.6;
 }
 
@@ -2144,7 +2147,7 @@ footer {
   }
   .edu-item .meta {
     gap: 10px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
   .project-card .card-body {
     padding: 16px 18px 20px;
@@ -2158,5 +2161,19 @@ footer {
   }
   body {
     cursor: auto;
+  }
+  .edu-item .title,
+  .project-title {
+    font-size: 1.3rem;
+  }
+  .about-text p,
+  .project-sub {
+    font-size: 0.9rem;
+  }
+  .edu-item .honor {
+    font-size: 0.7rem;
+  }
+  .modal-right {
+    padding: 1em;
   }
 }
